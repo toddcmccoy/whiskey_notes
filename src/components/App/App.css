@@ -14,12 +14,36 @@ img {
   max-width: 100%;
 }
 
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #033076;
+  text-align: center;
+  min-height: 70px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 20px;
+}
+
 /* --------------------------------------------------------------------------------
 Container
 -------------------------------------------------------------------------------- */
 
 .container {
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.question-card {
+  /* Add shadows to create the "card" effect */
+  width: 800px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  text-align: center;
 }
 
 /* --------------------------------------------------------------------------------
