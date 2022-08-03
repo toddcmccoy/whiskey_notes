@@ -8,6 +8,61 @@ import { combineReducers } from 'redux';
 //             return state;
 // };
 
+const dateReducer = (state = '', action) => {
+	switch (action.type) {
+		case 'ADD_DATE':
+			return action.payload;
+		default:
+			return state;
+	}
+};
+
+
+const whiskeyNameReducer = (state = '', action) => {
+	switch (action.type) {
+		case 'ADD_WHISKEY_NAME':
+			return action.payload;
+		default:
+			return state;
+	}
+};
+
+const whiskeyAbvReducer = (state = '', action) => {
+	switch (action.type) {
+		case 'ADD_WHISKEY_ABV':
+			return action.payload;
+		default:
+			return state;
+	}
+};
+
+const whiskeyStyleReducer = (state = '', action) => {
+	switch (action.type) {
+		case 'ADD_WHISKEY_STYLE':
+			return action.payload;
+		default:
+			return state;
+	}
+};
+
+const whiskeyCountryReducer = (state = '', action) => {
+	switch (action.type) {
+		case 'ADD_WHISKEY_COUNTRY':
+			return action.payload;
+		default:
+			return state;
+	}
+};
+
+const whyThisWhiskeyReducer = (state = '', action) => {
+	switch (action.type) {
+		case 'ADD_WHY_THIS_WHISKEY':
+			return action.payload;
+		default:
+			return state;
+	}
+};
+
 // reducer for aroma rating question
 const aromaRatingReducer = (state = 0, action) => {
 	switch (action.type) {
@@ -44,14 +99,7 @@ const aromaNotesReducer = (state = '', action) => {
 			return state;
 	}
 };
-const whiskeyNameReducer = (state = '', action) => {
-	switch (action.type) {
-		case 'ADD_WHISKEY_NAME':
-			return action.payload;
-		default:
-			return state;
-	}
-};
+
 //reducer for additional comments
 const overallNotesReducer = (state = '', action) => {
 	switch (action.type) {
@@ -67,9 +115,14 @@ export default combineReducers({
     aromaRatingReducer,
     flavorNotesReducer,
     flavorRatingReducer,
+    dateReducer,
+    whiskeyAbvReducer,
     whiskeyNameReducer,
+    whiskeyStyleReducer,
+    whiskeyCountryReducer,
+    whyThisWhiskeyReducer,
     overallNotesReducer
-  });
+});
 
 // creating store to keep info from all reducers
 // const storeInstance = createStore(

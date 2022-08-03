@@ -9,7 +9,7 @@ function AromaNotes(){
     const [aromaNotes, setAromaNotes] = useState('');
 
     const handleGoBack = () => {
-        history.push('/')
+        history.push('/aromarating')
     };
 
     const handleSubmit = () => {

@@ -9,7 +9,7 @@ function OverallNotes(){
     const [overallNotes, setOverallNotes] = useState('');
 
     const handleGoBack = () => {
-        history.push('/support')
+        history.push('/flavornotes')
     };
 
     const handleSubmit = () => {
@@ -17,7 +17,7 @@ function OverallNotes(){
             type: 'ADD_OVERALL_NOTES',
             payload: overallNotes
         })
-        history.push('/review')
+        history.push('/notereview')
     }
     return(
         <div className = "container">

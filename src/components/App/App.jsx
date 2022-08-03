@@ -67,7 +67,7 @@ function App() {
             exact
             path="/dashboard"
           >
-            <Dashboard />
+          <Dashboard />
           </ProtectedRoute>
 
           <ProtectedRoute
@@ -75,16 +75,44 @@ function App() {
             exact
             path="/newwhiskeynote"
           >
-            <NewWhiskeyNote />
+          <NewWhiskeyNote />
 
+          </ProtectedRoute>
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/aromarating"
+          >
+            <AromaRating />
+          </ProtectedRoute>
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/aromanotes"
+          >
+            <AromaNotes />
           </ProtectedRoute>
 
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
-            path="/info"
+            path="/flavorrating"
           >
-            <InfoPage />
+            <FlavorRating />
+          </ProtectedRoute>
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/flavornotes"
+          >
+            <FlavorNotes />
+          </ProtectedRoute>
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/overallnotes"
+          >
+            <OverallNotes />
           </ProtectedRoute>
 
           <Route

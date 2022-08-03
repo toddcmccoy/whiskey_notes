@@ -9,7 +9,7 @@ function AromaRating(){
     const [aromaRating, setAromaRating] = useState(1);
 
     const handleGoBack = () => {
-        history.push('/')
+        history.push('/newwhiskeynote')
     };
 
 // sending the selected rating to the store and ensuring that the submission is in the range of 1 to 5

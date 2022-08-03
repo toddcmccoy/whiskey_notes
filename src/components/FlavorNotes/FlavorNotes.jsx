@@ -9,7 +9,7 @@ function FlavorNotes(){
     const [flavorNotes, setFlavorNotes] = useState('');
 
     const handleGoBack = () => {
-        history.push('/')
+        history.push('/flavorrating')
     };
 
     const handleSubmit = () => {
@@ -17,7 +17,7 @@ function FlavorNotes(){
             type: 'ADD_FLAVOR_NOTES',
             payload: flavorNotes
         })
-        history.push('/review')
+        history.push('/overallnotes')
     }
     return(
         <div className = "container">

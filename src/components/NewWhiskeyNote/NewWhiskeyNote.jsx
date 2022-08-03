@@ -51,6 +51,10 @@ function NewWhiskeyNote(){
             type: 'ADD_WHISKEY_COUNTRY',
             payload: whiskeyCountry
         });
+        dispatch ({
+            type: 'ADD_WHY_THIS_WHISKEY',
+            payload: whyThisWhiskey
+        })
         history.push('/aromarating')
     }
 
