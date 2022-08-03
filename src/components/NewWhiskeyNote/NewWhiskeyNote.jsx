@@ -14,6 +14,7 @@ function NewWhiskeyNote(){
     const [whiskeyStyle, setWhiskeyStyle] = useState('');
     const [whiskeyCountry, setWhiskeyCountry] = useState('');
     const [whyThisWhiskey, setWhyThisWhiskey] = useState('');
+    
 
     // const styleOptions = [
     //     'Blend', 'Bourbon', 'Grain', 'Malt', 'Rye', 'Other'
@@ -105,13 +106,16 @@ function NewWhiskeyNote(){
                 value = {defaultCountryOption}  
                 placeholder="Select country of origin" /> */}
                     <br />
+                    <p>Why did you pick this whiskey?</p>
                     <input
                     type="text"
                     placeholder="Why this bottle?"
                     className="text-box"
                     value = {whyThisWhiskey}
                     onChange={(event) => setWhyThisWhiskey(event.target.value)}
-                    />
+                    /><br />
+                    
+
                 </form>
 
                 <button onClick={handleSubmit}>Go to Aroma Rating</button>

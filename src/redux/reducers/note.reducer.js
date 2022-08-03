@@ -82,6 +82,15 @@ const flavorRatingReducer = (state = 0, action) => {
 	}
 };
 
+const overallRatingReducer = (state = 0, action) => {
+	switch (action.type) {
+		case 'ADD_OVERALL_RATING':
+			return action.payload;
+		default:
+			return state;
+	}
+};
+
 const flavorNotesReducer = (state = '', action) => {
 	switch (action.type) {
 		case 'ADD_FLAVOR_NOTES':

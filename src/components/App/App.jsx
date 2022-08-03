@@ -28,6 +28,7 @@ import FlavorWheel from '../FlavorWheel/FlavorWheel';
 import HowToTaste from '../HowToTaste/HowToTaste';
 import OverallNotes from '../OverallNotes/OverallNotes';
 import AppHowToUse from '../AppHowToUse/AppHowToUse';
+import NoteReview from '../NoteReview/NoteReview';
 
 import './App.css';
 import NewWhiskeyNote from '../NewWhiskeyNote/NewWhiskeyNote';
@@ -113,6 +114,14 @@ function App() {
             path="/overallnotes"
           >
             <OverallNotes />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/notereview"
+          >
+            <NoteReview />
           </ProtectedRoute>
 
           <Route

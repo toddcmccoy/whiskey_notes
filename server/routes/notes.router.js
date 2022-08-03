@@ -24,24 +24,31 @@ router.get('/', (req, res) => {
  * POST route template
  */
   // POST route code here
-router.post('/',  (req, res) => {
+router.post('/tastingnotes',  (req, res) => {
     let tastingNote = req.body;
     let queryText = `INSERT INTO "tasting_notes" (
-    "whiskey_name", "whiskey_abv", "aroma_rating", "aroma_notes",
-    "flavor_rating", "flavor_notes", "overall_notes","buy_again" "user_id", "date"
+    "user_id", "date","whiskey_name", "whiskey_abv", 
+    "whiskey_style", "whiskey_country", "why_this_whiskey", 
+    "aroma_rating", "aroma_notes",
+    "flavor_rating", "flavor_notes", 
+    "overall_notes","buy_again", "overall_rating"
     )
     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10);`;
     pool.query(queryText, 
-        [tastingNote.whiskeyName, 
-        tastingNote.whiskeyAbv, 
+        [tastingNote.userId, 
+        tastingNote.date,
+        tastingNote.whiskeyName, 
+        tastingNote.whiskeyAbv,
+        tastingNote.whiskeyStyle,
+        tastingNote.whiskeyCountry, 
         tastingNote.aromaRating, 
         tastingNote.aromaNotes,
         tastingNote.flavorRating, 
         tastingNote.flavorNotes, 
         tastingNote.overallNotes, 
         tastingNote.buyAgain,
-        tastingNote.userId, 
-        tastingNote.date,])
+        tastingNote.overallRating
+        ])
 .then(result => {
     res.sendStatus(201);
     })
