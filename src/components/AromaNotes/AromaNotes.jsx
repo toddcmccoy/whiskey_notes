@@ -17,7 +17,7 @@ function AromaNotes(){
             type: 'ADD_AROMA_NOTES',
             payload: aromaNotes
         })
-        history.push('/review')
+        history.push('/flavorrating')
     }
     return(
         <div className = "container">

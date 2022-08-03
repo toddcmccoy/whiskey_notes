@@ -29,7 +29,7 @@ function Nav() {
               Your Dashboard
             </Link>
 
-            <Link className="navLink" to="/flavorrating">
+            <Link className="navLink" to="/newwhiskeynote">
               New Whiskey Note
             </Link>
 
@@ -49,7 +49,7 @@ function Nav() {
           </>
         )}
 
-        <Link className="navLink" to="/about">
+        <Link className="navLink" to="/apphowtouse">
           About
         </Link>
       </div>

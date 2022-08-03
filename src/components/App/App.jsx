@@ -27,8 +27,10 @@ import FlavorRating from '../FlavorRating/FlavorRating';
 import FlavorWheel from '../FlavorWheel/FlavorWheel';
 import HowToTaste from '../HowToTaste/HowToTaste';
 import OverallNotes from '../OverallNotes/OverallNotes';
+import AppHowToUse from '../AppHowToUse/AppHowToUse';
 
 import './App.css';
+import NewWhiskeyNote from '../NewWhiskeyNote/NewWhiskeyNote';
 
 function App() {
   const dispatch = useDispatch();
@@ -51,9 +53,9 @@ function App() {
           <Route
             // shows AboutPage at all times (logged in or not)
             exact
-            path="/about"
+            path="/apphowtouse"
           >
-            <AboutPage />
+            <AppHowToUse />
           </Route>
 
           {/* For protected routes, the view could show one of several things on the same route.
@@ -63,9 +65,18 @@ function App() {
           <ProtectedRoute
             // logged in shows UserPage else shows LoginPage
             exact
-            path="/user"
+            path="/dashboard"
           >
-            <UserPage />
+            <Dashboard />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows UserPage else shows LoginPage
+            exact
+            path="/newwhiskeynote"
+          >
+            <NewWhiskeyNote />
+
           </ProtectedRoute>
 
           <ProtectedRoute
@@ -83,7 +94,7 @@ function App() {
             {user.id ?
               // If the user is already logged in, 
               // redirect to the /user page
-              <Redirect to="/user" />
+              <Redirect to="/dashboard" />
               :
               // Otherwise, show the login page
               <LoginPage />

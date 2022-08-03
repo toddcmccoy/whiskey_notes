@@ -19,7 +19,7 @@ function AromaRating(){
             type: 'ADD_AROMA_RATING',
             payload: Number(aromaRating)
         })
-        history.push('/aroma_notes')
+        history.push('/aromanotes')
         } else {
             alert ('You must enter a number between 1 and 10. There are no wrong answers.')
         };

@@ -19,7 +19,7 @@ function FlavorRating(){
             type: 'ADD_FLAVOR_RATING',
             payload: Number(flavorRating)
         })
-        history.push('/flavor_notes')
+        history.push('/flavornotes')
         } else {
             alert ('You must enter a number between 1 and 10. There are no wrong answers.')
         };
