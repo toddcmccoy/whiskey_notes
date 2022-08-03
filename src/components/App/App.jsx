@@ -19,6 +19,14 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+import AromaNotes from '../AromaNotes/AromaNotes';
+import AromaRating from '../AromaRating/AromaRating';
+import Dashboard from '../Dashboard/Dashboard';
+import FlavorNotes from '../FlavorNotes/FlavorNotes';
+import FlavorRating from '../FlavorRating/FlavorRating';
+import FlavorWheel from '../FlavorWheel/FlavorWheel';
+import HowToTaste from '../HowToTaste/HowToTaste';
+import OverallNotes from '../OverallNotes/OverallNotes';
 
 import './App.css';
 

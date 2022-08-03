@@ -2,11 +2,11 @@ import { useState} from 'react'
 import { useHistory } from "react-router-dom"
 import { useDispatch } from 'react-redux'; 
 
-function Comments(){
+function OverallNotes(){
 
     const dispatch = useDispatch();
     const history = useHistory();
-    const [comments, setComments] = useState('');
+    const [overallNotes, setOverallNotes] = useState('');
 
     const handleGoBack = () => {
         history.push('/support')
@@ -14,8 +14,8 @@ function Comments(){
 
     const handleSubmit = () => {
         dispatch ({
-            type: 'ADD_COMMENTS',
-            payload: comments
+            type: 'ADD_OVERALL_NOTES',
+            payload: overallNotes
         })
         history.push('/review')
     }
@@ -27,8 +27,8 @@ function Comments(){
                 <input
                 type="text"
                 className="text-box"
-                value = {comments}
-                onChange={(event) => setComments(event.target.value)}
+                value = {overallNotes}
+                onChange={(event) => setOverallNotes(event.target.value)}
                 />
             </form><br />
             <button onClick={handleGoBack}>Previous</button>
@@ -41,4 +41,4 @@ function Comments(){
 
 }
 
-export default Comments;
+export default OverallNotes;

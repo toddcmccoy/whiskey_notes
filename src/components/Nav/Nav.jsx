@@ -29,7 +29,7 @@ function Nav() {
               Your Dashboard
             </Link>
 
-            <Link className="navLink" to="/new_whiskey_note">
+            <Link className="navLink" to="/flavorrating">
               New Whiskey Note
             </Link>
 
@@ -41,7 +41,7 @@ function Nav() {
               Educational Resources
             </Link>
 
-            <Link className="navLink" to="/how_to">
+            <Link className="navLink" to="/howtotaste">
               How To Use
             </Link>
 
