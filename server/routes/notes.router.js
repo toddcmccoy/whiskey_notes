@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
  * POST route template
  */
   // POST route code here
-router.post('/tastingnotes',  (req, res) => {
+router.post('/',  (req, res) => {
     let tastingNote = req.body;
     let queryText = `INSERT INTO "tasting_notes" (
     "user_id", "date","whiskey_name", "whiskey_abv", 
@@ -33,7 +33,7 @@ router.post('/tastingnotes',  (req, res) => {
     "flavor_rating", "flavor_notes", 
     "overall_notes","buy_again", "overall_rating"
     )
-    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10);`;
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14);`;
     pool.query(queryText, 
         [tastingNote.userId, 
         tastingNote.date,

@@ -16,7 +16,9 @@ function NoteReview(){
     const flavorRating = useSelector(store => store.flavorRatingReducer);
     const flavorNotes = useSelector(store => store.flavorNotesReducer);
     const overallNotes = useSelector(store => store.overallNotesReducer);
-    
+    const buyAgain = useSelector(store => store.buyAgainReducer);
+    const overallRating = useSelector(store => store.overallRatingReducer);
+
     const handleGoBack = () => {
         history.push('/overallnotes')
     };
@@ -25,7 +27,7 @@ function NoteReview(){
     const onSubmitFeedback = () => {
         axios({
             method: 'POST',
-            url: '/tastingnotes',
+            url: '/:id',
             data: {
                 date: reviewDate, 
                 whiskey_name: whiskeyName,
@@ -61,9 +63,18 @@ function NoteReview(){
         <ul>
             <li><h1>Review your whiskey note</h1></li>
             <li>Date entered: {reviewDate}</li>
-            <li>Understanding: {}</li>
-            <li>Support: {}</li>
-            <li>Comments: {}</li>
+            <li>Whiskey Name: {whiskeyName}</li>
+            <li>ABV: {whiskeyAbv}</li>
+            <li>Style: {whiskeyStyle}</li>
+            <li>Country of Origin: {whiskeyCountry}</li>
+            <li>Why this bottle?: {whyThisWhiskey}</li>
+            <li>Aroma Rating: {aromaRating}</li>
+            <li>Aroma Notes: {aromaNotes}</li>
+            <li>Flavor Rating: {flavorRating}</li>
+            <li>Flavor Notes: {flavorNotes}</li>
+            <li>Overall Notes: {overallNotes}</li>
+            <li>Would you buy this again?: {buyAgain}</li>
+            <li>Overall Rating of this whiskey: {overallRating}</li>
         </ul><br />
         <button onClick={handleGoBack}>Previous</button>
         <button type="submit" onClick={onSubmitFeedback}>Submit</button>
