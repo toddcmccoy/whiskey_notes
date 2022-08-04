@@ -139,3 +139,21 @@ input {
 ul{
   list-style: none;
 }
+
+table{
+  border: 1px solid;
+  padding: 8px;
+  border-collapse: collapse;
+}
+
+th{
+  border: 1px solid;
+  padding: 8px;
+  border-collapse: collapse;
+}
+
+tr, td {
+  border: 1px solid;
+  padding: 8px;
+  border-collapse: collapse;
+}
