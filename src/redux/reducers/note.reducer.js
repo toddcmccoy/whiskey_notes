@@ -119,6 +119,15 @@ const overallNotesReducer = (state = '', action) => {
 	}
 };
 
+const buyAgainReducer = (state = '', action) => {
+	switch (action.type) {
+		case 'ADD_BUY_AGAIN':
+			return action.payload;
+		default:
+			return state;
+	}
+};
+
 export default combineReducers({
     aromaNotesReducer,
     aromaRatingReducer,
@@ -130,7 +139,8 @@ export default combineReducers({
     whiskeyStyleReducer,
     whiskeyCountryReducer,
     whyThisWhiskeyReducer,
-    overallNotesReducer
+    overallNotesReducer,
+    buyAgainReducer
 });
 
 // creating store to keep info from all reducers

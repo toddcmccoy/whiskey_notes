@@ -22,6 +22,10 @@ function OverallNotes(){
         dispatch ({
             type: 'ADD_OVERALL_RATING',
             payload: Number(overallRating)
+        });
+        dispatch ({
+            type: 'ADD_BUY_AGAIN',
+            payload: buyAgain
         })
         history.push('/notereview')
     }
