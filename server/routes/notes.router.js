@@ -26,17 +26,17 @@ router.get('/', (req, res) => {
   // POST route code here
 router.post('/',  (req, res) => {
     let tastingNote = req.body;
+    console.log ('content is:', tastingNote);
     let queryText = `INSERT INTO "tasting_notes" (
-    "user_id", "date","whiskey_name", "whiskey_abv", 
+    "date","whiskey_name", "whiskey_abv", 
     "whiskey_style", "whiskey_country", "why_this_whiskey", 
     "aroma_rating", "aroma_notes",
     "flavor_rating", "flavor_notes", 
     "overall_notes","buy_again", "overall_rating"
     )
-    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14);`;
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12);`;
     pool.query(queryText, 
-        [tastingNote.userId, 
-        tastingNote.date,
+        [tastingNote.date,
         tastingNote.whiskeyName, 
         tastingNote.whiskeyAbv,
         tastingNote.whiskeyStyle,

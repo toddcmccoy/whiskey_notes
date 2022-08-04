@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { useHistory } from "react-router-dom"
+import { useHistory, useParams } from "react-router-dom"
 import { useDispatch } from 'react-redux';
+
 // import Dropdown, { onSelect } from 'react-dropdown';
 // import 'react-dropdown/style.css';
 
@@ -14,6 +15,7 @@ function NewWhiskeyNote(){
     const [whiskeyStyle, setWhiskeyStyle] = useState('');
     const [whiskeyCountry, setWhiskeyCountry] = useState('');
     const [whyThisWhiskey, setWhyThisWhiskey] = useState('');
+    // const userId = useParams();
     
 
     // const styleOptions = [

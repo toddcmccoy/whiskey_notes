@@ -27,21 +27,21 @@ function NoteReview(){
     const onSubmitFeedback = () => {
         axios({
             method: 'POST',
-            url: '/:id',
+            url: '/api/notes',
             data: {
                 date: reviewDate, 
-                whiskey_name: whiskeyName,
-                whiskey_abv: whiskeyAbv,
-                whiskey_style: whiskeyStyle,
-                whiskey_country: whiskeyCountry, 
-                why_this_whiskey: whyThisWhiskey, 
-                aroma_rating: aromaRating, 
-                aroma_notes: aromaNotes, 
-                flavor_rating: flavorRating, 
-                flavor_notes: flavorNotes,
-                overall_notes: overallNotes,
-                buy_again: buyAgain,
-                overall_rating: overallRating
+                whiskeyName: whiskeyName,
+                whiskeyAbv: whiskeyAbv,
+                whiskeyStyle: whiskeyStyle,
+                whiskeyCountry: whiskeyCountry, 
+                whyThisWhiskey: whyThisWhiskey, 
+                aromaRating: aromaRating, 
+                aromaNotes: aromaNotes, 
+                flavorRating: flavorRating, 
+                flavorNotes: flavorNotes,
+                overallNotes: overallNotes,
+                buyAgain: buyAgain,
+                overallRating: overallRating
             }
         })
         .then(() => {

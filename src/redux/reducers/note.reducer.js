@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
+
+
 // reducer for the GET request to grab information stored in the database
-// const feedbackReducer = (state = [], action) => {
+// const notesReducer = (state = [], action) => {
 //     switch (action.type){
-//         case 'GET_FEEDBACK':
+//         case 'GET_TASTING_NOTES':
 //             return action.payload;
 //         }
 //             return state;
@@ -129,6 +131,7 @@ const buyAgainReducer = (state = '', action) => {
 };
 
 export default combineReducers({
+	// notesReducer,
     aromaNotesReducer,
     aromaRatingReducer,
     flavorNotesReducer,
@@ -140,7 +143,8 @@ export default combineReducers({
     whiskeyCountryReducer,
     whyThisWhiskeyReducer,
     overallNotesReducer,
-    buyAgainReducer
+    buyAgainReducer,
+	overallRatingReducer
 });
 
 // creating store to keep info from all reducers
