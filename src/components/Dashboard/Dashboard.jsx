@@ -10,6 +10,10 @@ function Dashboard() {
   const history = useHistory();
   const notes = useSelector(store => store.note.notesReducer);
 
+  useEffect(() => {
+    dispatch({ type: 'FETCH_NOTES' });
+}, []);
+
   return (
     <div className="container">
       <div>
@@ -17,7 +21,7 @@ function Dashboard() {
       <table>
         <tbody>
           {notes.map((note, i)=>(
-            <tr key={i}><td>{note.whiskeyName}</td></tr>
+            <tr key={i}><td>{note.whiskey_name}</td></tr>
           ))}
         </tbody>
       </table>
