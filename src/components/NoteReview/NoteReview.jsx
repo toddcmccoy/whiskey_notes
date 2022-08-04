@@ -5,19 +5,20 @@ import {useSelector} from 'react-redux';
 function NoteReview(){
 // setting feedback values stored in our redux store to variables in order to post them to the database
     const history = useHistory();
-    const reviewDate = useSelector(store => store.dateReducer);
-    const whiskeyName = useSelector(store => store.whiskeyNameReducer);
-    const whiskeyAbv = useSelector(store => store.whiskeyAbvReducer);
-    const whiskeyStyle = useSelector(store => store.whiskeyStyleReducer);
-    const whiskeyCountry = useSelector(store => store.whiskeyAbvReducer);
-    const whyThisWhiskey = useSelector(store => store.whyThisWhiskeyReducer);
-    const aromaRating = useSelector(store => store.aromaRatingReducer);
-    const aromaNotes = useSelector(store => store.aromaNotesReducer);
-    const flavorRating = useSelector(store => store.flavorRatingReducer);
-    const flavorNotes = useSelector(store => store.flavorNotesReducer);
-    const overallNotes = useSelector(store => store.overallNotesReducer);
-    const buyAgain = useSelector(store => store.buyAgainReducer);
-    const overallRating = useSelector(store => store.overallRatingReducer);
+    const userId = useSelector(store => store.user.id);
+    const reviewDate = useSelector(store => store.note.dateReducer);
+    const whiskeyName = useSelector(store => store.note.whiskeyNameReducer);
+    const whiskeyAbv = useSelector(store => store.note.whiskeyAbvReducer);
+    const whiskeyStyle = useSelector(store => store.note.whiskeyStyleReducer);
+    const whiskeyCountry = useSelector(store => store.note.whiskeyAbvReducer);
+    const whyThisWhiskey = useSelector(store => store.note.whyThisWhiskeyReducer);
+    const aromaRating = useSelector(store => store.note.aromaRatingReducer);
+    const aromaNotes = useSelector(store => store.note.aromaNotesReducer);
+    const flavorRating = useSelector(store => store.note.flavorRatingReducer);
+    const flavorNotes = useSelector(store => store.note.flavorNotesReducer);
+    const overallNotes = useSelector(store => store.note.overallNotesReducer);
+    const buyAgain = useSelector(store => store.note.buyAgainReducer);
+    const overallRating = useSelector(store => store.note.overallRatingReducer);
 
     const handleGoBack = () => {
         history.push('/overallnotes')
@@ -29,6 +30,7 @@ function NoteReview(){
             method: 'POST',
             url: '/api/notes',
             data: {
+                userId: userId,
                 date: reviewDate, 
                 whiskeyName: whiskeyName,
                 whiskeyAbv: whiskeyAbv,
@@ -45,16 +47,16 @@ function NoteReview(){
             }
         })
         .then(() => {
-            console.log(`In POST `)
+            console.log(`In POST `);
         })
         .catch((err) => {
             console.log(`ERR in POST`, err)
         })
         alert('Your whiskey note has been added successfully.')
-        history.push('/')
+        history.push('/dashboard')
     }
 // displaying the collected feedback on the page before user confirms final submission
-    return(
+return(
     <>
         <div className = "container">
         
@@ -62,7 +64,7 @@ function NoteReview(){
         
         <ul>
             <li><h1>Review your whiskey note</h1></li>
-            <li>Date entered: {reviewDate}</li>
+            <li>Date entered: { reviewDate }</li>
             <li>Whiskey Name: {whiskeyName}</li>
             <li>ABV: {whiskeyAbv}</li>
             <li>Style: {whiskeyStyle}</li>

@@ -2,13 +2,13 @@ import { combineReducers } from 'redux';
 
 
 // reducer for the GET request to grab information stored in the database
-// const notesReducer = (state = [], action) => {
-//     switch (action.type){
-//         case 'GET_TASTING_NOTES':
-//             return action.payload;
-//         }
-//             return state;
-// };
+const notesReducer = (state = [], action) => {
+    switch (action.type){
+        case 'GET_TASTING_NOTES':
+            return action.payload;
+        }
+            return state;
+};
 
 const dateReducer = (state = '', action) => {
 	switch (action.type) {
@@ -131,7 +131,7 @@ const buyAgainReducer = (state = '', action) => {
 };
 
 export default combineReducers({
-	// notesReducer,
+	notesReducer,
     aromaNotesReducer,
     aromaRatingReducer,
     flavorNotesReducer,
@@ -146,21 +146,3 @@ export default combineReducers({
     buyAgainReducer,
 	overallRatingReducer
 });
-
-// creating store to keep info from all reducers
-// const storeInstance = createStore(
-// combineReducers({
-//     feedbackReducer,
-//     commentsReducer,
-//     supportReducer,
-//     understandingReducer,
-//     feelingReducer
-// }),
-// applyMiddleware(logger),
-// );
-
-// // Provider
-// ReactDOM.render
-// (<Provider store = { storeInstance }>
-//     <App />
-// </Provider>, document.getElementById('root'));
