@@ -61,7 +61,7 @@ return(
         <div className = "container">
         
         <div className = "question-card">
-        
+        <button onClick={handleGoBack}>Previous</button>
         <ul>
             <li><h1>Review your whiskey note</h1></li>
             <li>Date entered: { reviewDate }</li>
@@ -78,7 +78,7 @@ return(
             <li>Would you buy this again?: {buyAgain}</li>
             <li>Overall Rating of this whiskey: {overallRating}</li>
         </ul><br />
-        <button onClick={handleGoBack}>Previous</button>
+        
         <button type="submit" onClick={onSubmitFeedback}>Submit</button>
         </div>
         </div>

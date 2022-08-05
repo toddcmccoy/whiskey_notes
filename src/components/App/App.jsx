@@ -25,6 +25,7 @@ import AromaRating from '../AromaRating/AromaRating';
 import Dashboard from '../Dashboard/Dashboard';
 import FlavorNotes from '../FlavorNotes/FlavorNotes';
 import FlavorRating from '../FlavorRating/FlavorRating';
+import Education from '../Education/Education';
 // import FlavorWheel from '../FlavorWheel/FlavorWheel';
 // import HowToTaste from '../HowToTaste/HowToTaste';
 import OverallNotes from '../OverallNotes/OverallNotes';
@@ -131,6 +132,14 @@ function App() {
             path="/archive"
           >
             <Archive />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/education"
+          >
+            <Education />
           </ProtectedRoute>
 
           <Route

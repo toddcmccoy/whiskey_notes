@@ -32,6 +32,7 @@ function OverallNotes(){
     return(
         <div className = "container">
         <div className = "question-card">
+        <button onClick={handleGoBack}>Previous</button>
             <h1>Do you have any additional comments you would like to add?</h1>
             <form>
                 <input
@@ -64,7 +65,7 @@ function OverallNotes(){
                     onChange={(event) => setBuyAgain(event.target.value)}
                     />
                 </form>
-            <button onClick={handleGoBack}>Previous</button>
+            
             <button onClick={handleSubmit}>Go to Note Review</button>
         </div>
     </div>
