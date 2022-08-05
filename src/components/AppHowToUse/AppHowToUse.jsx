@@ -25,7 +25,11 @@ function AppHowToUse(){
                 The app is designed to help you pace yourself and move through the tasting process step by step.
                 <br />
                 Before you get started please check out our 
-                How to Taste guide.</h3>
+                How to Taste guide.</h3><br />
+                <br />
+                <h2>Do I have to use this for whiskey only?<br /></h2>
+                <h3>Nope, this is a basic guide that can serve your journey with any spirit, even beer or wine if you wish.<br />
+                If you want to use it to track your favorite gins, have at it.</h3>
             <br />
             <br />
             <button onClick={handleGoDashboard}>Back to dashboard</button>
