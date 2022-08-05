@@ -28,6 +28,7 @@ function FlavorRating(){
     return(
         <div className = "container">
         <div className = "question-card">
+        <button onClick={handleGoBack}>Previous</button>
             <h1>How would you rate the flavor intensity of this whiskey?</h1>
             <h2>Please select a number between 1 and 10.</h2>
             <h3>1 being 'It doesn't taste like much of anything. This is simply wet and mildly alcoholic, I think.'</h3>
@@ -42,7 +43,7 @@ function FlavorRating(){
                 onChange={(event) => setFlavorRating(event.target.value)}
                 />
             </form><br />
-            <button onClick={handleGoBack}>Previous</button>
+            
             <button onClick={handleSubmit}>Next</button>
         </div>
     </div>

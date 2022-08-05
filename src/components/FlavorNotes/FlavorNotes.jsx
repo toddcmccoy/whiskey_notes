@@ -22,6 +22,7 @@ function FlavorNotes(){
     return(
         <div className = "container">
         <div className = "question-card">
+        <button onClick={handleGoBack}>Previous</button>
             <h1>What flavors did you detect? Remember, no wrong answers. If you taste banana, you taste banana. Write it down.</h1>
             <form>
                 <input
@@ -31,7 +32,7 @@ function FlavorNotes(){
                 onChange={(event) => setFlavorNotes(event.target.value)}
                 />
             </form><br />
-            <button onClick={handleGoBack}>Previous</button>
+            
             <button onClick={handleSubmit}>Go to Overall Notes</button>
         </div>
     </div>

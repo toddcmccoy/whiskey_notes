@@ -22,6 +22,7 @@ function AromaNotes(){
     return(
         <div className = "container">
         <div className = "question-card">
+            <button onClick={handleGoBack}>Previous</button>
             <h1>What do you smell? Remember, no wrong answers. If you smell wet leather, record it here.</h1>
             <form>
                 <input
@@ -31,7 +32,7 @@ function AromaNotes(){
                 onChange={(event) => setAromaNotes(event.target.value)}
                 />
             </form><br />
-            <button onClick={handleGoBack}>Previous</button>
+            
             <button onClick={handleSubmit}>Go to Flavor Rating</button>
         </div>
     </div>

@@ -28,6 +28,7 @@ function AromaRating(){
     return(
         <div className = "container">
         <div className = "question-card">
+        <button onClick={handleGoBack}>Previous</button>
             <h1>How would you rate the aroma intensity of this whiskey?</h1>
             <h2>Please select a number between 1 and 10.</h2>
             <h3>1 being 'It doesn't smell like much of anything. No alcohol burn and no detectable scents.'</h3>
@@ -42,7 +43,7 @@ function AromaRating(){
                 onChange={(event) => setAromaRating(event.target.value)}
                 />
             </form><br />
-            <button onClick={handleGoBack}>Previous</button>
+            
             <button onClick={handleSubmit}>Next</button>
         </div>
     </div>
