@@ -6,8 +6,11 @@ const notesReducer = (state = [], action) => {
     switch (action.type){
         case 'GET_TASTING_NOTES':
             return action.payload;
-        }
+		case 'DELETE_NOTE':
+			return [];
+		default:
             return state;
+	}
 };
 
 const dateReducer = (state = '', action) => {

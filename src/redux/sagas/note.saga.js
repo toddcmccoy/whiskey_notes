@@ -24,8 +24,20 @@ function* fetchUserNotes() {
         
 }
 
+function* deleteNote(action) {
+    console.log('this is action', action.payload);
+    try {
+      yield axios.delete(`/api/notes/${action.payload}`)
+      yield put({type: 'DELETE_NOTE'});
+    }
+    catch (error) {
+      console.log('item is too strong to be deleted', error);
+    }
+  }
+
 function* userNoteSaga() {
     yield takeEvery('FETCH_NOTES', fetchUserNotes);
+    yield takeEvery('REMOVE_NOTE', deleteNote);
 }
 
 export default userNoteSaga;

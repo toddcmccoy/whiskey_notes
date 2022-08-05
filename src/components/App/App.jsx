@@ -14,8 +14,9 @@ import Footer from '../Footer/Footer';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 import AboutPage from '../AboutPage/AboutPage';
-import UserPage from '../UserPage/UserPage';
-import InfoPage from '../InfoPage/InfoPage';
+// import UserPage from '../UserPage/UserPage';
+// import InfoPage from '../InfoPage/InfoPage';
+import Archive from '../Archive/Archive';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
@@ -24,8 +25,8 @@ import AromaRating from '../AromaRating/AromaRating';
 import Dashboard from '../Dashboard/Dashboard';
 import FlavorNotes from '../FlavorNotes/FlavorNotes';
 import FlavorRating from '../FlavorRating/FlavorRating';
-import FlavorWheel from '../FlavorWheel/FlavorWheel';
-import HowToTaste from '../HowToTaste/HowToTaste';
+// import FlavorWheel from '../FlavorWheel/FlavorWheel';
+// import HowToTaste from '../HowToTaste/HowToTaste';
 import OverallNotes from '../OverallNotes/OverallNotes';
 import AppHowToUse from '../AppHowToUse/AppHowToUse';
 import NoteReview from '../NoteReview/NoteReview';
@@ -122,6 +123,14 @@ function App() {
             path="/notereview"
           >
             <NoteReview />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/archive"
+          >
+            <Archive />
           </ProtectedRoute>
 
           <Route

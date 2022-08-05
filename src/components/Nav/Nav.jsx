@@ -41,7 +41,7 @@ function Nav() {
               Educational Resources
             </Link>
 
-            <Link className="navLink" to="/howtotaste">
+            <Link className="navLink" to="/apphowtouse">
               How To Use
             </Link>
 

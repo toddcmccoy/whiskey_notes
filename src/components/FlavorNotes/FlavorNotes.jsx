@@ -32,7 +32,7 @@ function FlavorNotes(){
                 />
             </form><br />
             <button onClick={handleGoBack}>Previous</button>
-            <button onClick={handleSubmit}>Go to Note Review</button>
+            <button onClick={handleSubmit}>Go to Overall Notes</button>
         </div>
     </div>
     )

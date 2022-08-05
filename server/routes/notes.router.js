@@ -1,6 +1,9 @@
 const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
+const {
+    rejectUnauthenticated,
+  } = require('../modules/authentication-middleware');
 
 /**
  * GET route template
@@ -60,19 +63,37 @@ router.post('/',  (req, res) => {
     });
 });
 
-// router.delete('/:id', (req, res) => {
-//     let reqId = req.params.id;
-//     console.log(`Delete request sent for id ${reqId}`);
-//     let queryText = 'DELETE FROM "tasting_notes" WHERE id = $1;';
-//     pool.query(queryText, [reqId])
-//     .then(() => {
-//         console.log('Treat deleted!')
-//         res.sendStatus(200);
-//     })
-//     .catch((error) => {
-//         console.log(`Error deleting with query ${queryText}: ${error}`);
-//         res.sendStatus(500); //good server always responds
-//     })
-// })
+// router.put('/:id', (req, res) => {
+//     // Update this single student
+//     const noteToUpdate = req.params.id;
+//     const sqlText = `UPDATE students SET github_name = $1 WHERE id = $2`;
+//     pool.query(sqlText, [req.body.github_name, noteToUpdate])
+//         .then((result) => {
+//             res.sendStatus(200);
+//         })
+//         .catch((error) => {
+//             console.log(`Error making database query ${sqlText}`, error);
+//             res.sendStatus(500);
+//         });
+// });
+
+router.delete('/:id', (req, res) => {
+    const id = req.params.id
+    console.log ('this is the id:', id);
+    const user = req.user.id
+    console.log('This is the user', user);
+
+    const queryText = 'DELETE FROM "tasting_notes" WHERE id = $1;';
+
+    pool.query(queryText, [id])
+        .then((result) => {
+            res.sendStatus(201);
+        })
+        .catch((error) => {
+            console.log('something wrong in /shelf DELETE', error);
+            res.sendStatus(500);
+        })
+// endpoint functionality
+});
 
 module.exports = router;

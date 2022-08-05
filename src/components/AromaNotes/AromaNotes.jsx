@@ -32,7 +32,7 @@ function AromaNotes(){
                 />
             </form><br />
             <button onClick={handleGoBack}>Previous</button>
-            <button onClick={handleSubmit}>Go to Note Review</button>
+            <button onClick={handleSubmit}>Go to Flavor Rating</button>
         </div>
     </div>
     )
