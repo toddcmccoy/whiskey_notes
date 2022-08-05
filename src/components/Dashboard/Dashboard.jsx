@@ -16,7 +16,7 @@ function Dashboard() {
 
   return (
     <div className="container">
-      <div>
+      <div className="question-card">
       <h1>Whiskey Notes</h1>
       <table>
         <tr>

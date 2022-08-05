@@ -60,4 +60,19 @@ router.post('/',  (req, res) => {
     });
 });
 
+// router.delete('/:id', (req, res) => {
+//     let reqId = req.params.id;
+//     console.log(`Delete request sent for id ${reqId}`);
+//     let queryText = 'DELETE FROM "tasting_notes" WHERE id = $1;';
+//     pool.query(queryText, [reqId])
+//     .then(() => {
+//         console.log('Treat deleted!')
+//         res.sendStatus(200);
+//     })
+//     .catch((error) => {
+//         console.log(`Error deleting with query ${queryText}: ${error}`);
+//         res.sendStatus(500); //good server always responds
+//     })
+// })
+
 module.exports = router;
