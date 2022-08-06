@@ -1,11 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-// Provider allows us to use redux within our react app
-import { Provider } from 'react-redux';
-import logger from 'redux-logger';
-// Import saga middleware
-import createSagaMiddleware from 'redux-saga';
 import { takeEvery, put } from 'redux-saga/effects';
 import axios from 'axios';
 
@@ -29,6 +21,7 @@ function* deleteNote(action) {
     try {
       yield axios.delete(`/api/notes/${action.payload}`)
       yield put({type: 'DELETE_NOTE'});
+      yield put({type:'FETCH_NOTES'});
     }
     catch (error) {
       console.log('item is too strong to be deleted', error);

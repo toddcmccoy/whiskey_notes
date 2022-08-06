@@ -27,8 +27,6 @@ const handleEditNote = () => {
 };
 
 const handleDeleteNote = (note) => {
-  console.log("start of handleDeleteNote");
-  console.log('this is note.id', note.id);
   dispatch({
     type: 'REMOVE_NOTE',
     payload: note.id

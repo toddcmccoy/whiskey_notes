@@ -70,7 +70,9 @@ function NewWhiskeyNote(){
                     value = {date}
                     onChange={(event) => setDate(event.target.value)}
                     />
-                    <br />
+
+                        <br />
+
                     <input
                     type="text"
                     placeholder="Whiskey Name"
@@ -84,7 +86,9 @@ function NewWhiskeyNote(){
                     value = {whiskeyAbv}
                     onChange={(event) => setWhiskeyAbv(event.target.value)}
                     />
-                    <br />
+
+                        <br />
+
                     <input
                     type="text"
                     placeholder="Whiskey Style"
