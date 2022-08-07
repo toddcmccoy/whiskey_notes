@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import LogOutButton from '../LogOutButton/LogOutButton';
 
 
-function Dashboard(props) {
+function Dashboard() {
 
 
   const dispatch = useDispatch();
@@ -24,8 +24,8 @@ const handleGoArchive = () => {
   history.push('/archive')
 };
 
-const handleEditNote = () => {
-  dispatch ({ type: 'SET_EDIT_NOTE', payload: props.note });
+const handleEditNote = (note) => {
+  dispatch ({ type: 'SET_EDIT_NOTE', payload: note });
   history.push('/editnote')
 };
 

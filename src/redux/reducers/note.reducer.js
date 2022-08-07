@@ -21,7 +21,7 @@ const editNoteReducer = (state  = {}, action) => {
             // spread - give me all of the object
             ...state,
             // then change this one in particular
-            [action.payload.whiskey_abv]: action.payload.value
+            [action.payload.property]: action.payload.value
             // ^-Property               ^-Value
         }
     } 
