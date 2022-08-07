@@ -26,7 +26,19 @@ const editNoteReducer = (state  = {}, action) => {
             // ^-Property               ^-Value
         }
     }else if(action.type === 'EDIT_CLEAR' ){
-        return { whiskey_abv: ''};
+        return { 
+			whiskey_abv: '',
+			whiskey_style: '',
+            whiskey_country: '',
+            why_this_whiskey: '',
+            aroma_rating: '',
+            aroma_notes: '',
+            flavor_rating: '',
+            flavor_notes: '',
+            overall_notes: '',
+            buy_again: '',
+            overall_rating: '',
+		};
     }
     return state;
 }

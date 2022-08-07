@@ -79,7 +79,7 @@ router.put('/:id', rejectUnauthenticated, (req, res) => {
     "flavor_notes" = $8, 
     "overall_notes" = $9,
     "buy_again" = $10, 
-    "overall_rating" = $11,
+    "overall_rating" = $11
     WHERE id = $12`;
     pool.query(sqlText, 
         [   req.body.whiskey_abv,
