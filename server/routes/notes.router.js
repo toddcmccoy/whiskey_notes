@@ -8,10 +8,10 @@ const {
 /**
  * GET route template
  */
-router.get('/', (req, res) => {
+router.get('/', rejectUnauthenticated, (req, res) => {
   // GET route code here
   const id = req.user.id
-  if (req.isAuthenticated());
+//   if (req.isAuthenticated());
   let queryText = `SELECT * from "tasting_notes" WHERE "user_id" = ${id};`;
     pool.query(queryText)
 .then(result => {
@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
  * POST route template
  */
   // POST route code here
-router.post('/',  (req, res) => {
+router.post('/', rejectUnauthenticated, (req, res) => {
     console.log("content is:", req.body);
     let queryText = `INSERT INTO "tasting_notes" (
     "user_id","date","whiskey_name", "whiskey_abv", 
@@ -63,13 +63,37 @@ router.post('/',  (req, res) => {
     });
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', rejectUnauthenticated, (req, res) => {
     // Update this single note
     const noteToUpdate = req.params.id;
     console.log('this is the note:', noteToUpdate);
     console.log('whiskey_abv', req.body.whiskey_abv);
-    const sqlText = `UPDATE "tasting_notes" SET "whiskey_abv" = $1 WHERE id = $2`;
-    pool.query(sqlText, [req.body.whiskey_abv, noteToUpdate])
+    const sqlText = `UPDATE "tasting_notes" 
+    SET "whiskey_abv" = $1,
+    "whiskey_style" = $2, 
+    "whiskey_country" = $3, 
+    "why_this_whiskey" = $4, 
+    "aroma_rating" = $5, 
+    "aroma_notes" = $6,
+    "flavor_rating" = $7, 
+    "flavor_notes" = $8, 
+    "overall_notes" = $9,
+    "buy_again" = $10, 
+    "overall_rating" = $11,
+    WHERE id = $12`;
+    pool.query(sqlText, 
+        [   req.body.whiskey_abv,
+            req.body.whiskey_style,
+            req.body.whiskey_country,
+            req.body.why_this_whiskey,
+            req.body.aroma_rating,
+            req.body.aroma_notes,
+            req.body.flavor_rating,
+            req.body.flavor_notes,
+            req.body.overall_notes,
+            req.body.buy_again,
+            req.body.overall_rating,
+            noteToUpdate ])
     // req.body.whiskey_abv ??
         .then((result) => {
             res.sendStatus(200);
@@ -80,7 +104,7 @@ router.put('/:id', (req, res) => {
         });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', rejectUnauthenticated, (req, res) => {
     const id = req.params.id
     console.log ('this is the id:', id);
     const user = req.user.id
