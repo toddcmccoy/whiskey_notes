@@ -64,7 +64,7 @@ const handleDeleteNote = (note) => {
             <td>{note.whiskey_name}</td>
             <td>{note.overall_rating}</td>
             <td>{note.buy_again}</td>
-            <td><button onClick={handleEditNote}>Edit</button></td>
+            <td><button onClick={(event) => handleEditNote(note)}>Edit</button></td>
             <td><button onClick={(event) => handleDeleteNote(note)}>Delete</button></td>
             </tr>
           ))}

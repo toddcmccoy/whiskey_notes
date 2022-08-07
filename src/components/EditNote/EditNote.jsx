@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
-function EditNote(props) {
+function EditNote() {
 
   const dispatch = useDispatch();
   const history = useHistory();
@@ -27,7 +27,7 @@ function EditNote(props) {
             dispatch({ type: 'EDIT_CLEAR' });
 
             // refresh will happen with useEffect on Home
-            history.push('/'); // back to list
+            history.push('/dashboard'); // back to list
         })
         .catch(error => {
             console.log('error on PUT: ', error);
@@ -39,7 +39,7 @@ function EditNote(props) {
   return (
     <>
       <h2>Edit Whiskey Note</h2>
-      <p>We are editing this student: {editNote.whiskey_name} from: {editNote.date}</p>
+      <p>We are editing this note: {editNote.whiskey_name} from: {editNote.date}</p>
       <form onSubmit={handleSubmit}>
         <input
           onChange={(event) => handleChange(event, 'whiskey_abv')}

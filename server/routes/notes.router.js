@@ -66,7 +66,8 @@ router.post('/',  (req, res) => {
 router.put('/:id', (req, res) => {
     // Update this single student
     const noteToUpdate = req.params.id;
-    const sqlText = `UPDATE 'tasting_notes' SET 'whiskey_abv' = $1 WHERE id = $2`;
+    console.log('this is the note:', noteToUpdate);
+    const sqlText = `UPDATE "tasting_notes" SET "whiskey_abv" = $1 WHERE id = $2`;
     pool.query(sqlText, [req.body.whiskey_abv, noteToUpdate])
         .then((result) => {
             res.sendStatus(200);
