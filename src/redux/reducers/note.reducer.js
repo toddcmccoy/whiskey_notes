@@ -13,6 +13,7 @@ const notesReducer = (state = [], action) => {
 
 const editNoteReducer = (state  = {}, action) => {
     if (action.type === 'SET_EDIT_NOTE'){
+		console.log('this is the payload:', action.payload);
         // action.payload is the object from the database
         return action.payload
     }
@@ -24,10 +25,9 @@ const editNoteReducer = (state  = {}, action) => {
             [action.payload.property]: action.payload.value
             // ^-Property               ^-Value
         }
-    } 
-	// else if(action.type ==='EDIT_CLEAR'){
-    //     return { github_name: ''};
-    // }
+    }else if(action.type === 'EDIT_CLEAR' ){
+        return { whiskey_abv: ''};
+    }
     return state;
 }
 

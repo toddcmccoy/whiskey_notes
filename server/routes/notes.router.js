@@ -64,11 +64,13 @@ router.post('/',  (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-    // Update this single student
+    // Update this single note
     const noteToUpdate = req.params.id;
     console.log('this is the note:', noteToUpdate);
+    console.log('whiskey_abv', req.body.whiskey_abv);
     const sqlText = `UPDATE "tasting_notes" SET "whiskey_abv" = $1 WHERE id = $2`;
     pool.query(sqlText, [req.body.whiskey_abv, noteToUpdate])
+    // req.body.whiskey_abv ??
         .then((result) => {
             res.sendStatus(200);
         })
