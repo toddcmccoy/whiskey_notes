@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import LogOutButton from '../LogOutButton/LogOutButton';
 
 
 function Dashboard() {
@@ -9,7 +10,7 @@ function Dashboard() {
   const dispatch = useDispatch();
   const history = useHistory();
   const notes = useSelector(store => store.note.notesReducer);
-  const [note, setNote] = useState('');
+  // const [note, setNote] = useState('');
 
   useEffect(() => {
     dispatch({ type: 'FETCH_NOTES' });
@@ -23,8 +24,9 @@ const handleGoArchive = () => {
   history.push('/archive')
 };
 
-const handleEditNote = () => {
-
+const handleEditNote = (note) => {
+  dispatch ({ type: 'SET_EDIT_NOTE', payload: note });
+  history.push('/editnote')
 };
 
 const handleDeleteNote = (note) => {
@@ -42,13 +44,13 @@ const handleDeleteNote = (note) => {
   return (
     <div className="container">
       <div className="question-card">
-      <h1>Whiskey Notes</h1>
+      <h1>Whisk&#40;e&#41;y Notes</h1>
       <button onClick={handleGoNewNote}>Enter a new note</button>
       <table>
         <thead>
           <tr>
             <th>Review Date</th>
-            <th>Whiskey Name</th>
+            <th>Whisk&#40;e&#41;y Name</th>
             <th>Overall Rating</th>
             <th>Would you buy it again?</th>
             <th>Edit</th>
@@ -62,14 +64,14 @@ const handleDeleteNote = (note) => {
             <td>{note.whiskey_name}</td>
             <td>{note.overall_rating}</td>
             <td>{note.buy_again}</td>
-            <td><button onClick={handleEditNote}>Edit</button></td>
+            <td><button onClick={(event) => handleEditNote(note)}>Edit</button></td>
             <td><button onClick={(event) => handleDeleteNote(note)}>Delete</button></td>
             </tr>
           ))}
         </tbody>
       </table>
       <button onClick={handleGoArchive}>View all notes</button>
-      {/* <LogOutButton className="btn" /> */}
+      <LogOutButton className="btn" />
       </div>
     </div>
   );

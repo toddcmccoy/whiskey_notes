@@ -6,12 +6,42 @@ const notesReducer = (state = [], action) => {
     switch (action.type){
         case 'GET_TASTING_NOTES':
             return action.payload;
-		// case 'DELETE_NOTE':
-		// 	return state;
 		default:
             return state;
 	}
 };
+
+const editNoteReducer = (state  = {}, action) => {
+    if (action.type === 'SET_EDIT_NOTE'){
+		console.log('this is the payload:', action.payload);
+        // action.payload is the object from the database
+        return action.payload
+    }
+    else if (action.type === 'EDIT_ONCHANGE'){
+        return{
+            // spread - give me all of the object
+            ...state,
+            // then change this one in particular
+            [action.payload.property]: action.payload.value
+            // ^-Property               ^-Value
+        }
+    }else if(action.type === 'EDIT_CLEAR' ){
+        return { 
+			whiskey_abv: '',
+			whiskey_style: '',
+            whiskey_country: '',
+            why_this_whiskey: '',
+            aroma_rating: '',
+            aroma_notes: '',
+            flavor_rating: '',
+            flavor_notes: '',
+            overall_notes: '',
+            buy_again: '',
+            overall_rating: '',
+		};
+    }
+    return state;
+}
 
 const dateReducer = (state = '', action) => {
 	switch (action.type) {
@@ -147,5 +177,6 @@ export default combineReducers({
     whyThisWhiskeyReducer,
     overallNotesReducer,
     buyAgainReducer,
-	overallRatingReducer
+	overallRatingReducer,
+	editNoteReducer
 });
