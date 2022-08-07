@@ -44,13 +44,13 @@ const handleDeleteNote = (note) => {
   return (
     <div className="container">
       <div className="question-card">
-      <h1>Whiskey Notes</h1>
+      <h1>Whisk&#40;e&#41;y Notes</h1>
       <button onClick={handleGoNewNote}>Enter a new note</button>
       <table>
         <thead>
           <tr>
             <th>Review Date</th>
-            <th>Whiskey Name</th>
+            <th>Whisk&#40;e&#41;y Name</th>
             <th>Overall Rating</th>
             <th>Would you buy it again?</th>
             <th>Edit</th>
