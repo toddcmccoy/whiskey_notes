@@ -6,12 +6,30 @@ const notesReducer = (state = [], action) => {
     switch (action.type){
         case 'GET_TASTING_NOTES':
             return action.payload;
-		// case 'DELETE_NOTE':
-		// 	return state;
 		default:
             return state;
 	}
 };
+
+const editNoteReducer = (state  = {}, action) => {
+    if (action.type === 'SET_EDIT_NOTE'){
+        // action.payload is the object from the database
+        return action.payload
+    }
+    else if (action.type === 'EDIT_ONCHANGE'){
+        return{
+            // spread - give me all of the object
+            ...state,
+            // then change this one in particular
+            [action.payload.property]: action.payload.value
+            // ^-Property               ^-Value
+        }
+    } 
+	// else if(action.type ==='EDIT_CLEAR'){
+    //     return { github_name: ''};
+    // }
+    return state;
+}
 
 const dateReducer = (state = '', action) => {
 	switch (action.type) {
@@ -147,5 +165,6 @@ export default combineReducers({
     whyThisWhiskeyReducer,
     overallNotesReducer,
     buyAgainReducer,
-	overallRatingReducer
+	overallRatingReducer,
+	editNoteReducer
 });

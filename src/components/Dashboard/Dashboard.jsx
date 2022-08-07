@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import LogOutButton from '../LogOutButton/LogOutButton';
 
 
-function Dashboard() {
+function Dashboard(props) {
 
 
   const dispatch = useDispatch();
   const history = useHistory();
   const notes = useSelector(store => store.note.notesReducer);
-  const [note, setNote] = useState('');
+  // const [note, setNote] = useState('');
 
   useEffect(() => {
     dispatch({ type: 'FETCH_NOTES' });
@@ -24,7 +25,8 @@ const handleGoArchive = () => {
 };
 
 const handleEditNote = () => {
-
+  dispatch ({ type: 'SET_EDIT_NOTE', payload: props.note });
+  history.push('/editnote')
 };
 
 const handleDeleteNote = (note) => {
@@ -69,7 +71,7 @@ const handleDeleteNote = (note) => {
         </tbody>
       </table>
       <button onClick={handleGoArchive}>View all notes</button>
-      {/* <LogOutButton className="btn" /> */}
+      <LogOutButton className="btn" />
       </div>
     </div>
   );
