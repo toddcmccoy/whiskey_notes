@@ -6,6 +6,8 @@ import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 
 function NewWhiskeyNote(){
 
@@ -49,9 +51,15 @@ function NewWhiskeyNote(){
     }
 
     return(
-        <div className = "container">
-            <div className = "question-card">
-                <form>
+        <Container fixed>
+            <Grid
+                container
+                direction="row"
+                justifyContent="space-evenly"
+                alignItems="center"
+                >
+                    <FormControl fullWidth>
+                
                     <input
                     type="date"
                     value = {date}
@@ -75,8 +83,12 @@ function NewWhiskeyNote(){
                     />
 
                         <br />
-                        <Box sx={{ maxWidth: 240 }}>
-                        <FormControl fullWidth>
+                        <Box sx={{
+                            display: 'flex', 
+                            justifyContent: 'space-around',
+                            flexDirection: 'row',
+                            }}>
+                        
                         <InputLabel id="whiskey-style">Whiskey Style</InputLabel>
                         <Select
                         labelId="whiskey-style"
@@ -92,7 +104,29 @@ function NewWhiskeyNote(){
                         <MenuItem value={'Rye'}>Rye</MenuItem>
                         <MenuItem value={'Other'}>Other</MenuItem>
                         </Select>
-                        </FormControl>
+                        
+                        
+
+                        
+                        
+                        <InputLabel id="whiskey-country">Whiskey Country</InputLabel>
+                        <Select
+                        labelId="whiskey-country"
+                        id="whiskey-country"
+                        value={whiskeyCountry}
+                        label="Whiskey Country"
+                        onChange={(event) => setWhiskeyCountry(event.target.value)}
+                        >
+                        <MenuItem value={'Canada'}>Canada</MenuItem>
+                        <MenuItem value={'India'}>India</MenuItem>
+                        <MenuItem value={'Ireland'}>Ireland</MenuItem>
+                        <MenuItem value={'Japan'}>Japan</MenuItem>
+                        <MenuItem value={'Scotland'}>Scotland</MenuItem>
+                        <MenuItem value={'Taiwan'}>Taiwan</MenuItem>
+                        <MenuItem value={'USA'}>USA</MenuItem>
+                        <MenuItem value={'Wales'}>Wales</MenuItem>
+                        <MenuItem value={'Other'}>Other</MenuItem>
+                        </Select>
                         </Box>
 
                     {/* <input
@@ -102,12 +136,12 @@ function NewWhiskeyNote(){
                     onChange={(event) => setWhiskeyStyle(event.target.value)}
                     /> */}
                 
-                    <input
+                    {/* <input
                     type="text"
                     placeholder="Country of Origin"
                     value = {whiskeyCountry}
                     onChange={(event) => setWhiskeyCountry(event.target.value)}
-                    />
+                    /> */}
                     <br />
                     <p>Why did you pick this whiskey?</p>
                     <input
@@ -119,11 +153,10 @@ function NewWhiskeyNote(){
                     /><br />
                     
 
-                </form>
-
                 <button onClick={handleSubmit}>Go to Aroma Rating</button>
-            </div>
-        </div>
+                </FormControl>
+            </Grid>
+        </Container>
     )
 
 }
