@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { useHistory, useParams } from "react-router-dom"
 import { useDispatch } from 'react-redux';
-
-// import Dropdown, { onSelect } from 'react-dropdown';
-// import 'react-dropdown/style.css';
+import Select from '@mui/material/Select'
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
 
 function NewWhiskeyNote(){
 
@@ -15,23 +17,8 @@ function NewWhiskeyNote(){
     const [whiskeyStyle, setWhiskeyStyle] = useState('');
     const [whiskeyCountry, setWhiskeyCountry] = useState('');
     const [whyThisWhiskey, setWhyThisWhiskey] = useState('');
-    // const userId = useParams();
     
-
-    // const styleOptions = [
-    //     'Blend', 'Bourbon', 'Grain', 'Malt', 'Rye', 'Other'
-    // ];
-    // const defaultStyleOption = styleOptions[0];
-
-    // const countryOptions = [
-    //     'Canada', 'India', 'Ireland', 'Japan', 'Scotland', 'Taiwan', 'USA', 'Wales', 'Other'
-    // ];
-    // const defaultCountryOption = countryOptions[0];
     
-
-    // const handleGoBack = () => {
-    //     history.push('/')
-    // };
 
     const handleSubmit = () => {
         dispatch ({
@@ -88,13 +75,32 @@ function NewWhiskeyNote(){
                     />
 
                         <br />
+                        <Box sx={{ maxWidth: 240 }}>
+                        <FormControl fullWidth>
+                        <InputLabel id="whiskey-style">Whiskey Style</InputLabel>
+                        <Select
+                        labelId="whiskey-style"
+                        id="whiskey-style"
+                        value={whiskeyStyle}
+                        label="Whiskey Style"
+                        onChange={(event) => setWhiskeyStyle(event.target.value)}
+                        >
+                        <MenuItem value={'Blend'}>Blend</MenuItem>
+                        <MenuItem value={'Bourbon'}>Bourbon</MenuItem>
+                        <MenuItem value={'Grain'}>Grain</MenuItem>
+                        <MenuItem value={'Malt'}>Malt</MenuItem>
+                        <MenuItem value={'Rye'}>Rye</MenuItem>
+                        <MenuItem value={'Other'}>Other</MenuItem>
+                        </Select>
+                        </FormControl>
+                        </Box>
 
-                    <input
+                    {/* <input
                     type="text"
                     placeholder="Whiskey Style"
                     value = {whiskeyStyle}
                     onChange={(event) => setWhiskeyStyle(event.target.value)}
-                    />
+                    /> */}
                 
                     <input
                     type="text"
@@ -102,15 +108,6 @@ function NewWhiskeyNote(){
                     value = {whiskeyCountry}
                     onChange={(event) => setWhiskeyCountry(event.target.value)}
                     />
-                {/* <Dropdown options={styleOptions} 
-                // onChange={this.onSelect} 
-                value={defaultStyleOption}
-                placeholder="Select whisk&#40;e&#41;y style" />
-                <br />
-                <Dropdown options={countryOptions}
-                // onChange={this.onSelect}
-                value = {defaultCountryOption}  
-                placeholder="Select country of origin" /> */}
                     <br />
                     <p>Why did you pick this whiskey?</p>
                     <input

@@ -10,7 +10,7 @@ function NoteReview(){
     const whiskeyName = useSelector(store => store.note.whiskeyNameReducer);
     const whiskeyAbv = useSelector(store => store.note.whiskeyAbvReducer);
     const whiskeyStyle = useSelector(store => store.note.whiskeyStyleReducer);
-    const whiskeyCountry = useSelector(store => store.note.whiskeyAbvReducer);
+    const whiskeyCountry = useSelector(store => store.note.whiskeyCountryReducer);
     const whyThisWhiskey = useSelector(store => store.note.whyThisWhiskeyReducer);
     const aromaRating = useSelector(store => store.note.aromaRatingReducer);
     const aromaNotes = useSelector(store => store.note.aromaNotesReducer);

@@ -5,6 +5,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
+import swal from 'sweetalert';
 
 import { useDispatch, useSelector } from 'react-redux';
 

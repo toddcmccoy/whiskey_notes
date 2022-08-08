@@ -3,3 +3,18 @@ footer {
   padding: 20px;
   text-align: center;
 }
+
+.wheel {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-left: 25%;
+  border-color: #014041;
+  border-width: 1px 1px 3px;
+  border-radius: 4px;
+  background-color: darkorange;
+  color: #f8f8f8;
+  font-size: 1.1rem;
+  outline: 0;
+  cursor: pointer;
+  width: 50%;
+}
