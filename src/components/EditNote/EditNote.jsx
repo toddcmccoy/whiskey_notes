@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 function EditNote() {
 
@@ -25,7 +26,7 @@ function EditNote() {
         .then( response => {
             // clean up reducer data            
             dispatch({ type: 'EDIT_CLEAR' });
-
+            swal("Sláinte Mhor!", "Your changes have been saved", "success");
             // refresh will happen with useEffect on Home
             history.push('/dashboard'); // back to list
         })
@@ -39,8 +40,8 @@ function EditNote() {
   return (
     <div className = "edit-container">
       <div className = "edit-card">
-      <h1>Edit Whiskey Note</h1> 
-      <br /><h2>{editNote.whiskey_name}</h2><br />
+      <h2>Edit Whiskey Note</h2> 
+      <br /><h1>{editNote.whiskey_name}</h1><br />
       Created on: <h3>{editNote.date}</h3>
       <form onSubmit={handleSubmit}>
       <label for="ABV">ABV</label>
@@ -64,12 +65,6 @@ function EditNote() {
                     <option value="Other">Other</option>
                     </select>
                     <br />
-        {/* <input
-          id="Style"
-          onChange={(event) => handleChange(event, 'whiskey_style')}
-          placeholder='Whiskey Style'
-          value={editNote.whiskey_style} //very important
-        /><br /> */}
 
                     <label for="Country">Country</label>
                     <select id="whiskeyCountry" 
@@ -77,6 +72,7 @@ function EditNote() {
                     value = {editNote.whiskey_country}
                     onChange={(event) => handleChange(event, 'whiskey_country')}
                     >
+                    
                     <option value="Canada">Canada</option>
                     <option value="India">India</option>
                     <option value="Ireland">Ireland</option>
@@ -88,26 +84,22 @@ function EditNote() {
                     <option value="Other">Other</option>
                     </select>
 
-        {/* <input
-          id="Country"
-          onChange={(event) => handleChange(event, 'whiskey_country')}
-          placeholder='Whiskey Country'
-          value={editNote.whiskey_country} //very important
-        /> */}
-        <label for="Why">Why this whiskey?</label>
-        <textarea
-          id="Why"
-          onChange={(event) => handleChange(event, 'why_this_whiskey')}
-          placeholder='Why This Whiskey'
-          value={editNote.why_this_whiskey} //very important
-        /><br />
-        <label for="Aroma Rating">Aroma Rating</label>
+  <label for="Why">Why this whiskey?</label>
+  <textarea
+    id="Why"
+    onChange={(event) => handleChange(event, 'why_this_whiskey')}
+    placeholder='Why This Whiskey'
+    value={editNote.why_this_whiskey} //very important
+  /><br />
+
+  <label for="Aroma Rating">Aroma Rating</label>
         <input
           id="Aroma Rating"
           onChange={(event) => handleChange(event, 'aroma_rating')}
           placeholder='Aroma Rating'
           value={editNote.aroma_rating} //very important
         />
+
         <label for="Aroma Notes">Aroma Notes</label>
         <textarea
           id="Aroma Notes"
@@ -115,6 +107,7 @@ function EditNote() {
           placeholder='Aroma Notes'
           value={editNote.aroma_notes} //very important
         /><br />
+
         <label for="Flavor Rating">Flavor Rating</label>
         <input
           id="Flavor Rating"
@@ -122,6 +115,7 @@ function EditNote() {
           placeholder='Flavor Rating'
           value={editNote.flavor_rating} //very important
         />
+
         <label for="Flavor Notes">Flavor Notes</label>
         <textarea
           id="Flavor Notes"
@@ -129,6 +123,7 @@ function EditNote() {
           placeholder='Flavor Notes'
           value={editNote.flavor_notes} //very important
         /><br />
+        
         <label for="Overall Notes">Overall Notes</label>
         <textarea
           id="Overall Notes"

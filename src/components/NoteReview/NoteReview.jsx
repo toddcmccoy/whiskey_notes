@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
 import {useSelector} from 'react-redux';
+import swal from 'sweetalert';
 
 function NoteReview(){
 // setting feedback values stored in our redux store to variables in order to post them to the database
@@ -52,7 +53,7 @@ function NoteReview(){
         .catch((err) => {
             console.log(`ERR in POST`, err)
         })
-        alert('Your whiskey note has been added successfully.')
+        swal("Sláinte Mhaith!", "Your new note has been added", "success");
         history.push('/dashboard')
     }
 // displaying the collected feedback on the page before user confirms final submission
