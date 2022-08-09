@@ -35,7 +35,7 @@ function OverallNotes(){
         <button onClick={handleGoBack}>Previous</button>
             <h1>Do you have any additional comments you would like to add?</h1>
             <form>
-                <input
+                <textarea
                 type="text"
                 className="text-box"
                 value = {overallNotes}
