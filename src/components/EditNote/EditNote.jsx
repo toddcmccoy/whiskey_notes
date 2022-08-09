@@ -37,8 +37,8 @@ function EditNote() {
 
 
   return (
-    <div className = "container">
-      <div className = "question-card">
+    <div className = "edit-container">
+      <div className = "edit-card">
       <h1>Edit Whiskey Note</h1> 
       <br /><h2>{editNote.whiskey_name}</h2><br />
       Created on: <h3>{editNote.date}</h3>
@@ -50,22 +50,52 @@ function EditNote() {
           placeholder='Whiskey ABV'
           value={editNote.whiskey_abv} //very important
         />
-        <label for="Style">Style</label>
-        <input
+                    <label for="Style">Style</label>
+                    <select id="Style" 
+                    name="whiskeyStyle"
+                    value = {editNote.whiskey_style}
+                    onChange={(event) => handleChange(event, 'whiskey_style')}
+                    >
+                    <option value="Blend">Blend</option>
+                    <option value="Bourbon">Bourbon</option>
+                    <option value="Grain">Grain</option>
+                    <option value="Malt">Malt</option>
+                    <option value="Rye">Rye</option>
+                    <option value="Other">Other</option>
+                    </select>
+                    <br />
+        {/* <input
           id="Style"
           onChange={(event) => handleChange(event, 'whiskey_style')}
           placeholder='Whiskey Style'
           value={editNote.whiskey_style} //very important
-        /><br />
-        <label for="Country">Country</label>
-        <input
+        /><br /> */}
+
+                    <label for="Country">Country</label>
+                    <select id="whiskeyCountry" 
+                    name="whiskeyCountry"
+                    value = {editNote.whiskey_country}
+                    onChange={(event) => handleChange(event, 'whiskey_country')}
+                    >
+                    <option value="Canada">Canada</option>
+                    <option value="India">India</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Scotland">Scotland</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="USA">USA</option>
+                    <option value="Wales">Wales</option>
+                    <option value="Other">Other</option>
+                    </select>
+
+        {/* <input
           id="Country"
           onChange={(event) => handleChange(event, 'whiskey_country')}
           placeholder='Whiskey Country'
           value={editNote.whiskey_country} //very important
-        />
+        /> */}
         <label for="Why">Why this whiskey?</label>
-        <input
+        <textarea
           id="Why"
           onChange={(event) => handleChange(event, 'why_this_whiskey')}
           placeholder='Why This Whiskey'
@@ -79,7 +109,7 @@ function EditNote() {
           value={editNote.aroma_rating} //very important
         />
         <label for="Aroma Notes">Aroma Notes</label>
-        <input
+        <textarea
           id="Aroma Notes"
           onChange={(event) => handleChange(event, 'aroma_notes')}
           placeholder='Aroma Notes'
@@ -93,14 +123,14 @@ function EditNote() {
           value={editNote.flavor_rating} //very important
         />
         <label for="Flavor Notes">Flavor Notes</label>
-        <input
+        <textarea
           id="Flavor Notes"
           onChange={(event) => handleChange(event, 'flavor_notes')}
           placeholder='Flavor Notes'
           value={editNote.flavor_notes} //very important
         /><br />
         <label for="Overall Notes">Overall Notes</label>
-        <input
+        <textarea
           id="Overall Notes"
           onChange={(event) => handleChange(event, 'overall_notes')}
           placeholder='Overall Notes'
@@ -120,7 +150,7 @@ function EditNote() {
           placeholder='Overall Rating'
           value={editNote.overall_rating} //very important
         /><br />
-        <input type='submit' value='Update Note' />
+        <button type='submit' value='Update Note'>Save Note</button>
       </form>
       </div>
     </div>

@@ -22,8 +22,9 @@ const handleGoDashboard = () => {
   history.push('/dashboard')
 };
 
-const handleEditNote = () => {
-
+const handleEditNote = (note) => {
+  dispatch ({ type: 'SET_EDIT_NOTE', payload: note });
+  history.push('/editnote')
 };
 
 const handleDeleteNote = (note) => {
@@ -76,7 +77,7 @@ const handleDeleteNote = (note) => {
             <td>{note.overall_notes}</td>
             <td>{note.buy_again}</td>
             <td>{note.overall_rating}</td>
-            <td><button onClick={handleEditNote}>Edit</button></td>
+            <td><button onClick={(event) => handleEditNote(note)}>Edit</button></td>
             <td><button onClick={(event) => handleDeleteNote(note)}>Delete</button></td>
             </tr>
           ))}

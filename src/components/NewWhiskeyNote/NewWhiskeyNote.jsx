@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { useHistory, useParams } from "react-router-dom"
 import { useDispatch } from 'react-redux';
 
-// import Dropdown, { onSelect } from 'react-dropdown';
-// import 'react-dropdown/style.css';
 
 function NewWhiskeyNote(){
 
@@ -64,59 +62,87 @@ function NewWhiskeyNote(){
     return(
         <div className = "container">
             <div className = "question-card">
+                <h1>New Whisk&#40;e&#41;y Note</h1>
                 <form>
+                    <label for="review-date">Enter the date for your whisk&#40;e&#41;y note</label>
                     <input
+                    id="review-date"
                     type="date"
                     value = {date}
                     onChange={(event) => setDate(event.target.value)}
                     />
 
-                        <br />
-
+                    <br />
+                    <label for="whiskey-name">Enter the name of your whisk&#40;e&#41;y</label>
                     <input
+                    id="whiskey-name"
                     type="text"
                     placeholder="Whiskey Name"
                     value = {whiskeyName}
                     onChange={(event) => setWhiskeyName(event.target.value)}
                     />
-                
+                    <label for="abv">Enter the Alcohol By Volume &#40;ABV&#41; of your whisk&#40;e&#41;y</label>
                     <input
+                    id="abv"
                     type="text"
                     placeholder="Alcohol By Volume"
                     value = {whiskeyAbv}
                     onChange={(event) => setWhiskeyAbv(event.target.value)}
                     />
 
-                        <br />
+                    <br />
 
-                    <input
+                    {/* <input
                     type="text"
                     placeholder="Whiskey Style"
                     value = {whiskeyStyle}
                     onChange={(event) => setWhiskeyStyle(event.target.value)}
-                    />
+                    /><br /> */}
+                    <label for="whiskeyStyle">Select the style of your whisk&#40;e&#41;y</label>
+                    <select id="whiskeyStyle" 
+                    name="whiskeyStyle"
+                    value = {whiskeyStyle}
+                    onChange={(event) => setWhiskeyStyle(event.target.value)}
+                    >
+                    <option value="Blend">Blend</option>
+                    <option value="Bourbon">Bourbon</option>
+                    <option value="Grain">Grain</option>
+                    <option value="Malt">Malt</option>
+                    <option value="Rye">Rye</option>
+                    <option value="Other">Other</option>
+                    </select>
+                    <br />
                 
-                    <input
+                    {/* <input
                     type="text"
                     placeholder="Country of Origin"
                     value = {whiskeyCountry}
                     onChange={(event) => setWhiskeyCountry(event.target.value)}
-                    />
-                {/* <Dropdown options={styleOptions} 
-                // onChange={this.onSelect} 
-                value={defaultStyleOption}
-                placeholder="Select whisk&#40;e&#41;y style" />
-                <br />
-                <Dropdown options={countryOptions}
-                // onChange={this.onSelect}
-                value = {defaultCountryOption}  
-                placeholder="Select country of origin" /> */}
+                    /> */}
+                    <label for="whiskeyCountry">Select the country of origin of your whisk&#40;e&#41;y</label>
+                    <select id="whiskeyCountry" 
+                    name="whiskeyCountry"
+                    value = {whiskeyCountry}
+                    onChange={(event) => setWhiskeyCountry(event.target.value)}
+                    >
+                    <option value="Canada">Canada</option>
+                    <option value="India">India</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Scotland">Scotland</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="USA">USA</option>
+                    <option value="Wales">Wales</option>
+                    <option value="Other">Other</option>
+                    </select>
+
                     <br />
-                    <p>Why did you pick this whiskey?</p>
-                    <input
-                    type="text"
-                    placeholder="Why this bottle?"
-                    className="text-box"
+
+                    <label for="whythisbottle">Why did you pick this whisk&#40;e&#41;y?</label>
+                    <textarea
+                    id="whythisbottle"
+                    type="textarea"
+                    className="textarea"
                     value = {whyThisWhiskey}
                     onChange={(event) => setWhyThisWhiskey(event.target.value)}
                     /><br />
