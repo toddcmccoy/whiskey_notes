@@ -8,8 +8,11 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
+// import { makeStyles } from '@mui/core/styles';
+
 
 function NewWhiskeyNote(){
+
 
     const dispatch = useDispatch();
     const history = useHistory();
@@ -51,44 +54,47 @@ function NewWhiskeyNote(){
     }
 
     return(
-        <Container fixed>
-            <Grid
-                container
-                direction="row"
-                justifyContent="space-evenly"
-                alignItems="center"
+        <Box width="90%">
+            <Grid container spacing={3}
+                sx={{
+                justifyContent: "space-evenly",
+                alignItems: "center"
+                }}
                 >
-                    <FormControl fullWidth>
-                
+                    <Box width="25%">
+                    <Grid item xs={12} sm={12} md={8} lg={6}>
                     <input
                     type="date"
                     value = {date}
                     onChange={(event) => setDate(event.target.value)}
                     />
+                    </Grid>
+                    </Box>
 
-                        <br />
-
+                    <Box width="25%">
+                    <Grid item xs={12} sm={12} md={8} lg={6}>
                     <input
                     type="text"
                     placeholder="Whiskey Name"
                     value = {whiskeyName}
                     onChange={(event) => setWhiskeyName(event.target.value)}
                     />
-                
+                    </Grid>
+                    </Box>
+
+                    <Box width="25%">
+                    <Grid item xs={12} sm={12} md={8} lg={6}>
                     <input
                     type="text"
                     placeholder="Alcohol By Volume"
                     value = {whiskeyAbv}
                     onChange={(event) => setWhiskeyAbv(event.target.value)}
                     />
+                    </Grid>
+                    </Box>
 
-                        <br />
-                        <Box sx={{
-                            display: 'flex', 
-                            justifyContent: 'space-around',
-                            flexDirection: 'row',
-                            }}>
-                        
+                        <Box width={240}>
+                        <Grid item xs={12} sm={12} md={8} lg={6}>
                         <InputLabel id="whiskey-style">Whiskey Style</InputLabel>
                         <Select
                         labelId="whiskey-style"
@@ -104,11 +110,13 @@ function NewWhiskeyNote(){
                         <MenuItem value={'Rye'}>Rye</MenuItem>
                         <MenuItem value={'Other'}>Other</MenuItem>
                         </Select>
-                        
-                        
+                        </Grid>
+                        </Box>
 
-                        
-                        
+                        <Box
+                            width="100%"
+                            >
+                        <Grid item xs={12} sm={12} md={8} lg={6}>
                         <InputLabel id="whiskey-country">Whiskey Country</InputLabel>
                         <Select
                         labelId="whiskey-country"
@@ -127,22 +135,11 @@ function NewWhiskeyNote(){
                         <MenuItem value={'Wales'}>Wales</MenuItem>
                         <MenuItem value={'Other'}>Other</MenuItem>
                         </Select>
+                        </Grid>
                         </Box>
-
-                    {/* <input
-                    type="text"
-                    placeholder="Whiskey Style"
-                    value = {whiskeyStyle}
-                    onChange={(event) => setWhiskeyStyle(event.target.value)}
-                    /> */}
-                
-                    {/* <input
-                    type="text"
-                    placeholder="Country of Origin"
-                    value = {whiskeyCountry}
-                    onChange={(event) => setWhiskeyCountry(event.target.value)}
-                    /> */}
-                    <br />
+                    <Box>
+                    <Grid item xs={12} sm={12} md={8} lg={6}>
+                    
                     <p>Why did you pick this whiskey?</p>
                     <input
                     type="text"
@@ -151,12 +148,16 @@ function NewWhiskeyNote(){
                     value = {whyThisWhiskey}
                     onChange={(event) => setWhyThisWhiskey(event.target.value)}
                     /><br />
+                    </Grid>
+                    </Box>
                     
-
+                <Box>   
+                <Grid item xs={12} sm={12} md={8} lg={6}>
                 <button onClick={handleSubmit}>Go to Aroma Rating</button>
-                </FormControl>
+                </Grid>
+                </Box>
             </Grid>
-        </Container>
+        </Box>
     )
 
 }
