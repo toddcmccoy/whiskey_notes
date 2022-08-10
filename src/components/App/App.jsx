@@ -5,17 +5,10 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-
 import { useDispatch, useSelector } from 'react-redux';
-
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
-
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-
-import AboutPage from '../AboutPage/AboutPage';
-// import UserPage from '../UserPage/UserPage';
-// import InfoPage from '../InfoPage/InfoPage';
 import Archive from '../Archive/Archive';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
@@ -27,14 +20,12 @@ import FlavorNotes from '../FlavorNotes/FlavorNotes';
 import FlavorRating from '../FlavorRating/FlavorRating';
 import Education from '../Education/Education';
 import EditNote from '../EditNote/EditNote'
-// import FlavorWheel from '../FlavorWheel/FlavorWheel';
-// import HowToTaste from '../HowToTaste/HowToTaste';
 import OverallNotes from '../OverallNotes/OverallNotes';
 import AppHowToUse from '../AppHowToUse/AppHowToUse';
 import NoteReview from '../NoteReview/NoteReview';
-
-import './App.css';
 import NewWhiskeyNote from '../NewWhiskeyNote/NewWhiskeyNote';
+import './App.css';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -50,12 +41,12 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
+          {/* Visiting localhost:3000 will redirect to localhost:3000/login */}
           <Redirect exact from="/" to="/login" />
 
           {/* Visiting localhost:3000/about will show the about page. */}
           <Route
-            // shows AboutPage at all times (logged in or not)
+            // shows How to Use the App page at all times (logged in or not)
             exact
             path="/apphowtouse"
           >
@@ -63,11 +54,11 @@ function App() {
           </Route>
 
           {/* For protected routes, the view could show one of several things on the same route.
-            Visiting localhost:3000/user will show the UserPage if the user is logged in.
+            Visiting localhost:3000/user will show the dashboard if the user is logged in.
             If the user is not logged in, the ProtectedRoute will show the LoginPage (component).
             Even though it seems like they are different pages, the user is always on localhost:3000/user */}
           <ProtectedRoute
-            // logged in shows UserPage else shows LoginPage
+            // logged in shows dashboard else shows LoginPage
             exact
             path="/dashboard"
           >
@@ -75,7 +66,7 @@ function App() {
           </ProtectedRoute>
 
           <ProtectedRoute
-            // logged in shows UserPage else shows LoginPage
+            // logged in shows new whiskey note else shows LoginPage
             exact
             path="/newwhiskeynote"
           >
@@ -83,14 +74,14 @@ function App() {
 
           </ProtectedRoute>
           <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
+            // logged in shows aroma rating else shows LoginPage
             exact
             path="/aromarating"
           >
             <AromaRating />
           </ProtectedRoute>
           <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
+            // logged in shows aroma notes else shows LoginPage
             exact
             path="/aromanotes"
           >
@@ -98,21 +89,21 @@ function App() {
           </ProtectedRoute>
 
           <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
+            // logged in shows flavor rating else shows LoginPage
             exact
             path="/flavorrating"
           >
             <FlavorRating />
           </ProtectedRoute>
           <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
+            // logged in shows flavor notes else shows LoginPage
             exact
             path="/flavornotes"
           >
             <FlavorNotes />
           </ProtectedRoute>
           <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
+            // logged in shows overall notes else shows LoginPage
             exact
             path="/overallnotes"
           >
@@ -120,7 +111,7 @@ function App() {
           </ProtectedRoute>
 
           <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
+            // logged in shows note review else shows LoginPage
             exact
             path="/notereview"
           >
@@ -128,7 +119,7 @@ function App() {
           </ProtectedRoute>
 
           <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
+            // logged in shows note archive else shows LoginPage
             exact
             path="/archive"
           >
@@ -136,7 +127,7 @@ function App() {
           </ProtectedRoute>
 
           <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
+            // logged in shows Edit Note page else shows LoginPage
             exact
             path="/editnote"
           >
@@ -144,7 +135,7 @@ function App() {
           </ProtectedRoute>
 
           <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
+            // logged in shows education else shows LoginPage
             exact
             path="/education"
           >
@@ -157,7 +148,7 @@ function App() {
           >
             {user.id ?
               // If the user is already logged in, 
-              // redirect to the /user page
+              // redirect to the /dashboard page
               <Redirect to="/dashboard" />
               :
               // Otherwise, show the login page

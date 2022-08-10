@@ -30,19 +30,15 @@ function Nav() {
             </Link>
 
             <Link className="navLink" to="/newwhiskeynote">
-              New Whiskey Note
+              New Whisk&#40;e&#41;y Note
             </Link>
 
             <Link className="navLink" to="/archive">
-              Note Archive
+              Whisk&#40;e&#41;y Note Archive
             </Link>
 
             <Link className="navLink" to="/education">
               Educational Resources
-            </Link>
-
-            <Link className="navLink" to="/apphowtouse">
-              How To Use
             </Link>
 
             <LogOutButton className="navLink" />
@@ -50,7 +46,7 @@ function Nav() {
         )}
 
         <Link className="navLink" to="/apphowtouse">
-          About
+          How to use this App
         </Link>
       </div>
     </div>

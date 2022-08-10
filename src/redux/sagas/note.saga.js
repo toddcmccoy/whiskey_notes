@@ -15,7 +15,7 @@ function* fetchUserNotes() {
     }
         
 }
-
+// delete a note
 function* deleteNote(action) {
     console.log('this is action', action.payload);
     try {

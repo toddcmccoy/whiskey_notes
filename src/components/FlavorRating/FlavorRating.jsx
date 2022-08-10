@@ -29,10 +29,10 @@ function FlavorRating(){
         <div className = "container">
         <div className = "question-card">
         <button onClick={handleGoBack}>Previous</button>
-            <h1>How would you rate the flavor intensity of this whiskey?</h1>
-            <h2>Please select a number between 1 and 10.</h2>
-            <h3>1 being 'It doesn't taste like much of anything. This is simply wet and mildly alcoholic, I think.'</h3>
-            <h3>10 being 'Dang, that is intense. I'll let you know what I taste once my tastebuds heal.'</h3>
+            <h3>How would you rate the flavor intensity of this whiskey?</h3>
+            <p>Please select a number between 1 and 10.<br />
+            1 being 'It doesn't taste like much of anything. This is simply wet and mildly alcoholic, I think.'<br />
+            10 being 'Dang, that is intense. I'll let you know what I taste once my tastebuds heal.'<br /></p>
             <form>
                 <input
                 className= "number-input"

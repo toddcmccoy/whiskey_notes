@@ -11,6 +11,7 @@ const notesReducer = (state = [], action) => {
 	}
 };
 
+// reducer for the PUT request to submit updated notes
 const editNoteReducer = (state  = {}, action) => {
     if (action.type === 'SET_EDIT_NOTE'){
 		console.log('this is the payload:', action.payload);
@@ -19,7 +20,7 @@ const editNoteReducer = (state  = {}, action) => {
     }
     else if (action.type === 'EDIT_ONCHANGE'){
         return{
-            // spread - give me all of the object
+            // spread - give me all of the note
             ...state,
             // then change this one in particular
             [action.payload.property]: action.payload.value
@@ -43,6 +44,7 @@ const editNoteReducer = (state  = {}, action) => {
     return state;
 }
 
+// reducer for adding the date to the whiskey note
 const dateReducer = (state = '', action) => {
 	switch (action.type) {
 		case 'ADD_DATE':
@@ -52,7 +54,7 @@ const dateReducer = (state = '', action) => {
 	}
 };
 
-
+// reducer for adding the name to the whiskey note
 const whiskeyNameReducer = (state = '', action) => {
 	switch (action.type) {
 		case 'ADD_WHISKEY_NAME':
@@ -62,6 +64,7 @@ const whiskeyNameReducer = (state = '', action) => {
 	}
 };
 
+// reducer for adding the ABV to the whiskey note
 const whiskeyAbvReducer = (state = '', action) => {
 	switch (action.type) {
 		case 'ADD_WHISKEY_ABV':
@@ -71,6 +74,7 @@ const whiskeyAbvReducer = (state = '', action) => {
 	}
 };
 
+// reducer for adding the style to the whiskey note
 const whiskeyStyleReducer = (state = '', action) => {
 	switch (action.type) {
 		case 'ADD_WHISKEY_STYLE':
@@ -80,6 +84,7 @@ const whiskeyStyleReducer = (state = '', action) => {
 	}
 };
 
+// reducer for adding the country of origin to the whiskey note
 const whiskeyCountryReducer = (state = '', action) => {
 	switch (action.type) {
 		case 'ADD_WHISKEY_COUNTRY':
@@ -89,6 +94,7 @@ const whiskeyCountryReducer = (state = '', action) => {
 	}
 };
 
+// reducer for adding the reason for purchase to the whiskey note
 const whyThisWhiskeyReducer = (state = '', action) => {
 	switch (action.type) {
 		case 'ADD_WHY_THIS_WHISKEY':
@@ -107,7 +113,8 @@ const aromaRatingReducer = (state = 0, action) => {
 			return state;
 	}
 };
-// reducer for understanding question
+
+// reducer for flavor rating question
 const flavorRatingReducer = (state = 0, action) => {
 	switch (action.type) {
 		case 'ADD_FLAVOR_RATING':
@@ -117,6 +124,7 @@ const flavorRatingReducer = (state = 0, action) => {
 	}
 };
 
+// reducer for adding the overall to the whiskey note
 const overallRatingReducer = (state = 0, action) => {
 	switch (action.type) {
 		case 'ADD_OVERALL_RATING':
@@ -126,6 +134,7 @@ const overallRatingReducer = (state = 0, action) => {
 	}
 };
 
+// reducer for adding the flavor notes to the whiskey note
 const flavorNotesReducer = (state = '', action) => {
 	switch (action.type) {
 		case 'ADD_FLAVOR_NOTES':
@@ -135,6 +144,7 @@ const flavorNotesReducer = (state = '', action) => {
 	}
 };
 
+// reducer for adding the aroma notes to the whiskey note
 const aromaNotesReducer = (state = '', action) => {
 	switch (action.type) {
 		case 'ADD_AROMA_NOTES':
@@ -154,6 +164,7 @@ const overallNotesReducer = (state = '', action) => {
 	}
 };
 
+// reducer for adding whether you'd buy it again to the whiskey note
 const buyAgainReducer = (state = '', action) => {
 	switch (action.type) {
 		case 'ADD_BUY_AGAIN':
@@ -163,6 +174,7 @@ const buyAgainReducer = (state = '', action) => {
 	}
 };
 
+// sending out all the reducers
 export default combineReducers({
 	notesReducer,
     aromaNotesReducer,

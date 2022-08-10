@@ -42,22 +42,21 @@ function FlavorNotes(){
     }
     return(
         <div className = "container">
-        <div className = "question-card">
-        <button onClick={handleGoBack}>Previous</button>
-        <p>What do you taste? Remember, no wrong answers. <br />
-            If you taste banana, you taste banana. Write it down<br />
-            Taste and smell are very subjective. It is not important that your experience match anyone else's.<br />
-            It is important that you can relate to your notes.</p>
-            <p onClick={launchFlavors}>Need some inspiration? Click here.</p>
-            <form>
-                <textarea
-                type="text"
-                className="text-box"
-                value = {flavorNotes}
-                onChange={(event) => setFlavorNotes(event.target.value)}
-                />
-            </form><br />
-            
+            <div className = "question-card">
+                <button onClick={handleGoBack}>Previous</button>
+                    <p>What do you taste? Remember, no wrong answers. <br />
+                    If you taste banana, you taste banana. Write it down<br />
+                    Taste and smell are very subjective. It is not important that your experience match anyone else's.<br />
+                    It is important that you can relate to your notes.</p>
+                    <p onClick={launchFlavors}>Need some inspiration? Click here.</p>
+                        <form>
+                            <textarea
+                            type="text"
+                            className="text-box"
+                            value = {flavorNotes}
+                            onChange={(event) => setFlavorNotes(event.target.value)}
+                            />
+                        </form><br />
             <button onClick={handleSubmit}>Go to Overall Notes</button>
         </div>
     </div>

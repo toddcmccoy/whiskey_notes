@@ -29,10 +29,10 @@ function AromaRating(){
         <div className = "container">
         <div className = "question-card">
         <button onClick={handleGoBack}>Previous</button>
-            <h1>How would you rate the aroma intensity of this whiskey?</h1>
-            <h2>Please select a number between 1 and 10.</h2>
-            <h3>1 being 'It doesn't smell like much of anything. No alcohol burn and no detectable scents.'</h3>
-            <h3>10 being 'Wow, those scents are powerful. And/or I think the alcohol vapors permanently damaged my nose.'</h3>
+            <h3>How would you rate the aroma intensity of this whiskey?</h3>
+            <p>Please select a number between 1 and 10.<br />
+            1 being 'It doesn't smell like much of anything. No alcohol burn and no distinct aromas.'<br />
+            10 being 'Wow, those scents are powerful. And/or I think the alcohol vapors permanently damaged my nose.'<br /></p>
             <form>
                 <input
                 className= "number-input"
