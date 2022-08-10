@@ -4,7 +4,7 @@ import {useSelector} from 'react-redux';
 import swal from 'sweetalert';
 
 function NoteReview(){
-// setting feedback values stored in our redux store to variables in order to post them to the database
+// setting values stored in our redux store to variables in order to post them to the database
     const history = useHistory();
     const userId = useSelector(store => store.user.id);
     const reviewDate = useSelector(store => store.note.dateReducer);
@@ -48,43 +48,49 @@ function NoteReview(){
             }
         })
         .then(() => {
-            console.log(`In POST `);
+            dispatch({ type: 'FETCH_NOTES' });
+            swal("Sláinte Mhaith!", "Your new note has been added", "success");
         })
         .catch((err) => {
             console.log(`ERR in POST`, err)
         })
-        swal("Sláinte Mhaith!", "Your new note has been added", "success");
-        
         history.push('/dashboard')
     }
 // displaying the collected feedback on the page before user confirms final submission
 return(
-    <>
+    
         <div className = "container">
         
         <div className = "question-card">
-        <button onClick={handleGoBack}>Previous</button>
-        <ul>
-            <li><h1>Review your whiskey note</h1></li>
-            <li>Date entered: { reviewDate }</li>
-            <li>Whiskey Name: {whiskeyName}</li>
-            <li>ABV: {whiskeyAbv}</li>
-            <li>Style: {whiskeyStyle}</li>
-            <li>Country of Origin: {whiskeyCountry}</li>
-            <li>Why this bottle?: {whyThisWhiskey}</li>
-            <li>Aroma Rating: {aromaRating}</li>
-            <li>Aroma Notes: {aromaNotes}</li>
-            <li>Flavor Rating: {flavorRating}</li>
-            <li>Flavor Notes: {flavorNotes}</li>
-            <li>Overall Notes: {overallNotes}</li>
-            <li>Would you buy this again?: {buyAgain}</li>
-            <li>Overall Rating of this whiskey: {overallRating}</li>
-        </ul><br />
         
-        <button type="submit" onClick={onSubmitFeedback}>Submit</button>
-        </div>
-        </div>
-        </>
+        <h3>Review your new note</h3>
+        <table>
+            <thead>
+                <th>Field</th>
+                <th>Your Response</th>
+            </thead>
+            <tbody>
+                <tr><td>Date entered:</td><td> { reviewDate }</td></tr>
+                <tr><td>Whiskey Name:</td><td> {whiskeyName}</td></tr>
+                <tr><td>ABV: </td><td>{whiskeyAbv}</td></tr>
+                <tr><td>Style:</td><td> {whiskeyStyle}</td></tr>
+                <tr><td>Country of Origin:</td><td> {whiskeyCountry}</td></tr>
+                <tr><td>Why this bottle?: </td><td>{whyThisWhiskey}</td></tr>
+                <tr><td>Aroma Rating:</td><td> {aromaRating}</td></tr>
+                <tr><td>Aroma Notes:</td><td> {aromaNotes}</td></tr>
+                <tr><td>Flavor Rating: </td><td>{flavorRating}</td></tr>
+                <tr><td>Flavor Notes: </td><td>{flavorNotes}</td></tr>
+                <tr><td>Overall Notes: </td><td>{overallNotes}</td></tr>
+                <tr><td>Would you buy this again?: </td><td>{buyAgain}</td></tr>
+                <tr><td>Overall Rating of this whiskey: </td><td>{overallRating}</td></tr>
+            </tbody>
+        </table>
+        <br />
+                    <button onClick={handleGoBack}>Previous</button>
+                    <button className="click" type="submit" onClick={onSubmitFeedback}>Submit</button>
+                </div>
+            </div>
+        
     )
 }
 

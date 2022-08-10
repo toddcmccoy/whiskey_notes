@@ -43,7 +43,7 @@ function FlavorNotes(){
     return(
         <div className = "container">
             <div className = "question-card">
-                <button onClick={handleGoBack}>Previous</button>
+               
                     <p>What do you taste? Remember, no wrong answers. <br />
                     If you taste banana, you taste banana. Write it down<br />
                     Taste and smell are very subjective. It is not important that your experience match anyone else's.<br />
@@ -57,6 +57,7 @@ function FlavorNotes(){
                             onChange={(event) => setFlavorNotes(event.target.value)}
                             />
                         </form><br />
+                <button onClick={handleGoBack}>Previous</button>
             <button onClick={handleSubmit}>Go to Overall Notes</button>
         </div>
     </div>

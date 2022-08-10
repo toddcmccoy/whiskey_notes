@@ -2,7 +2,7 @@ html,
 body,
 #react-root {
   height: 100%;
-  background-color: whitesmoke;
+  background-color: lightgrey;
 }
 
 body {
@@ -20,7 +20,7 @@ img {
 }
 
 .App-header {
-  background-color: rgb(0, 110, 255);
+  background-color: rgb(96, 126, 170);
   text-align: center;
   min-height: 70px;
   padding: 20px;
@@ -52,8 +52,10 @@ Container
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  background-color: whitesmoke;
   justify-content: space-evenly;
-  width: 1400px;
+  width: auto;
+  min-width: 800px;
   padding: 20px;
   box-shadow: 0 12px 18px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
@@ -62,14 +64,16 @@ Container
 
 .question-card {
   /* Add shadows to create the "card" effect */
-  display: flex;
-  flex-direction: column;
+  display: block;
+  background-color: whitesmoke;
   justify-content: center;
-  width: 1400px;
+  width: auto;
+  min-width: 800px;
   padding: 20px;
   box-shadow: 0 12px 18px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   text-align: center;
+  clear: both;
 }
 
 /* --------------------------------------------------------------------------------
@@ -83,12 +87,18 @@ Button
   border-color: #014041;
   border-width: 1px 1px 3px;
   border-radius: 4px;
-  background-color: rgb(0, 110, 255);
+  background-color: rgb(96, 126, 170);
   color: #f8f8f8;
   font-size: 1.1rem;
   outline: 0;
   cursor: pointer;
 }
+
+/* .click {
+  max-width: 20%;
+  float: right;
+} */
+
 
 
 .btn_sizeMin {
@@ -189,11 +199,11 @@ ul{
   list-style: none;
 }
 
-table{
+table {
   border: 1px solid;
   padding: 8px;
   border-collapse: collapse;
-  margin: 12px;
+  margin: 0 auto;
   align-self: center;
 }
 
@@ -204,9 +214,11 @@ th{
 }
 
 tr, td {
+  
   border: 1px solid;
   padding: 8px;
   border-collapse: collapse;
+  justify-content: center;
 }
 
 textarea {

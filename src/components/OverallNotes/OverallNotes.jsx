@@ -32,8 +32,8 @@ function OverallNotes(){
     return(
         <div className = "container">
         <div className = "question-card">
-        <button onClick={handleGoBack}>Previous</button>
-            <h1>Do you have any additional comments you would like to add?</h1>
+        
+            <h4>Do you have any additional comments you would like to add?</h4>
             <form>
                 <textarea
                 type="text"
@@ -42,10 +42,10 @@ function OverallNotes(){
                 onChange={(event) => setOverallNotes(event.target.value)}
                 />
             </form>
-                <h2>How would you rate this whiskey overall?</h2>
-                <h2>Please select a number between 1 and 10.</h2>
-                <h3>1 being 'It effectively cleared the drain when I poured it out.'</h3>
-                <h3>10 being 'Whoa dang, this is the most amazing thing I have ever put in my mouth.'</h3>
+                <h4>How would you rate this whiskey overall?</h4>
+                <p>Please select a number between 1 and 10.<br />
+                    1 being 'It effectively cleared the drain when I poured it out.'<br />
+                    10 being 'Whoa dang, this is the most amazing thing I have ever put in my mouth.'</p>
                 <form>
                 <input
                 className= "number-input"
@@ -57,15 +57,17 @@ function OverallNotes(){
                 />
                 </form><br />
                 <form>
-                    <p>Would you buy this whiskey again?</p>
-                    <input
-                    type="text"
-                    placeholder="Yes or No"
+                    <label htmlFor="buyAgain">Would you buy this whiskey again?</label>
+                    <select id="buyAgain"
+                    name="buyAgain"
                     value = {buyAgain}
-                    onChange={(event) => setBuyAgain(event.target.value)}
-                    />
+                    onChange={(event) => setBuyAgain(event.target.value)}>
+                    <option value="None">Choose</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    </select>
                 </form>
-            
+                <button onClick={handleGoBack}>Previous</button>
             <button onClick={handleSubmit}>Go to Note Review</button>
         </div>
     </div>

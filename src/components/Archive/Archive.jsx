@@ -40,7 +40,7 @@ const handleDeleteNote = (note) => {
     <div className="container">
       <div className="question-card">
       <h1>Whiskey Notes</h1>
-      <button onClick={handleGoNewNote}>Enter a new note</button>
+      
       <table>
         <thead>
           <tr>
@@ -83,6 +83,7 @@ const handleDeleteNote = (note) => {
           ))}
         </tbody>
       </table>
+      <button onClick={handleGoNewNote}>Enter a new note</button>
       <button onClick={handleGoDashboard}>Back to dashboard</button>
       {/* <LogOutButton className="btn" /> */}
       </div>

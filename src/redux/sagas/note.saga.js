@@ -8,7 +8,6 @@ function* fetchUserNotes() {
     // get all notes from the DB
     try {
         const notes = yield axios.get('/api/notes');
-        console.log('get all:', notes.data);
         yield put({ type: 'GET_TASTING_NOTES', payload: notes.data });
     } catch {
         console.log('get all error');
@@ -20,11 +19,10 @@ function* deleteNote(action) {
     console.log('this is action', action.payload);
     try {
       yield axios.delete(`/api/notes/${action.payload}`)
-      // yield put({type: 'DELETE_NOTE'});
       yield put({type:'FETCH_NOTES'});
     }
     catch (error) {
-      console.log('item is too strong to be deleted', error);
+      console.log('item cannot be deleted', error);
     }
   }
 

@@ -13,23 +13,6 @@ function NewWhiskeyNote(){
     const [whiskeyStyle, setWhiskeyStyle] = useState('');
     const [whiskeyCountry, setWhiskeyCountry] = useState('');
     const [whyThisWhiskey, setWhyThisWhiskey] = useState('');
-    // const userId = useParams();
-    
-
-    // const styleOptions = [
-    //     'Blend', 'Bourbon', 'Grain', 'Malt', 'Rye', 'Other'
-    // ];
-    // const defaultStyleOption = styleOptions[0];
-
-    // const countryOptions = [
-    //     'Canada', 'India', 'Ireland', 'Japan', 'Scotland', 'Taiwan', 'USA', 'Wales', 'Other'
-    // ];
-    // const defaultCountryOption = countryOptions[0];
-    
-
-    // const handleGoBack = () => {
-    //     history.push('/')
-    // };
 
     const handleSubmit = () => {
         dispatch ({
@@ -64,7 +47,7 @@ function NewWhiskeyNote(){
             <div className = "question-card">
                 <h1>New Whisk&#40;e&#41;y Note</h1>
                 <form>
-                    <label for="review-date">Enter the date for your whisk&#40;e&#41;y note</label>
+                    <label htmlFor="review-date">Enter the date for your whisk&#40;e&#41;y note</label>
                     <input
                     id="review-date"
                     type="date"
@@ -73,7 +56,7 @@ function NewWhiskeyNote(){
                     />
 
                     <br />
-                    <label for="whiskey-name">Enter the name of your whisk&#40;e&#41;y</label>
+                    <label htmlFor="whiskey-name">Enter the name of your whisk&#40;e&#41;y</label>
                     <input
                     id="whiskey-name"
                     type="text"
@@ -93,7 +76,7 @@ function NewWhiskeyNote(){
                     <br />
 
                     
-                    <label for="whiskeyStyle">Select the style of your whisk&#40;e&#41;y</label>
+                    <label htmlFor="whiskeyStyle">Select the style of your whisk&#40;e&#41;y</label>
                     <select id="whiskeyStyle" 
                     name="whiskeyStyle"
                     value = {whiskeyStyle}
@@ -110,7 +93,7 @@ function NewWhiskeyNote(){
                     <br />
                 
                     
-                    <label for="whiskeyCountry">Select the country of origin of your whisk&#40;e&#41;y</label>
+                    <label htmlFor="whiskeyCountry">Select the country of origin of your whisk&#40;e&#41;y</label>
                     <select id="whiskeyCountry" 
                     name="whiskeyCountry"
                     value = {whiskeyCountry}
@@ -130,7 +113,7 @@ function NewWhiskeyNote(){
 
                     <br />
 
-                    <label for="whythisbottle">Why did you pick this whisk&#40;e&#41;y?</label>
+                    <label htmlFor="whythisbottle">Why did you pick this whisk&#40;e&#41;y?</label>
                     <textarea
                     id="whythisbottle"
                     type="textarea"

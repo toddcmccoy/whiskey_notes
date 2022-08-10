@@ -35,11 +35,12 @@ function EditNote() {
 
 
   return (
-    <div className = "edit-container">
-      <div className = "edit-card">
+    <div className = "container">
+      <div className = "question-card">
         <h2>Edit Whiskey Note</h2> 
           <br /><h1>{editNote.whiskey_name}</h1><br />
             Created on: <h3>{editNote.date}</h3>
+            
               <form onSubmit={handleSubmit}>
                 <label htmlFor="ABV">ABV</label>
                 <input
@@ -137,13 +138,17 @@ function EditNote() {
                       value={editNote.overall_notes} 
                     />
 
-                    <label for="Buy Again">Would you buy this again?</label>
-                    <input
-                      id="Buy Again"
+                    <label for="buyAgain">Would you buy this again?</label>
+                    <select
+                      name="buyAgain"
+                      id="buyAgain"
                       onChange={(event) => handleChange(event, 'buy_again')}
-                      placeholder='Buy Again'
                       value={editNote.buy_again} 
-                    />
+                    >
+                    <option value="None">Choose</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    </select>
 
                     <label for="Overall Rating">Your Overall Rating</label>
                     <input

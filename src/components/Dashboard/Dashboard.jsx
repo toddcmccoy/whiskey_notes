@@ -6,11 +6,10 @@ import LogOutButton from '../LogOutButton/LogOutButton';
 
 function Dashboard() {
 
-
+  const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
   const history = useHistory();
   const notes = useSelector(store => store.note.notesReducer);
-  // const [note, setNote] = useState('');
 
   useEffect(() => {
     dispatch({ type: 'FETCH_NOTES' });
@@ -44,8 +43,8 @@ const handleDeleteNote = (note) => {
   return (
     <div className="container">
       <div className="question-card">
-      <h1>Whisk&#40;e&#41;y Notes</h1>
-      <button onClick={handleGoNewNote}>Enter a new note</button>
+      <h1>{user.username}'s Whisk&#40;e&#41;y Notes</h1>
+      
       <table>
         <thead>
           <tr>
@@ -69,8 +68,9 @@ const handleDeleteNote = (note) => {
             </tr>
           ))}
         </tbody>
-      </table>
-      <button onClick={handleGoArchive}>View all notes</button>
+      </table><br />
+      <button className="click" onClick={handleGoNewNote}>Enter a new note</button>
+      <button className="click" onClick={handleGoArchive}>View all notes</button>
       <LogOutButton className="btn" />
       </div>
     </div>
