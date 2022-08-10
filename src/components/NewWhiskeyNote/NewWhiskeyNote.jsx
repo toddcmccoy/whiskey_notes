@@ -92,18 +92,14 @@ function NewWhiskeyNote(){
 
                     <br />
 
-                    {/* <input
-                    type="text"
-                    placeholder="Whiskey Style"
-                    value = {whiskeyStyle}
-                    onChange={(event) => setWhiskeyStyle(event.target.value)}
-                    /><br /> */}
+                    
                     <label for="whiskeyStyle">Select the style of your whisk&#40;e&#41;y</label>
                     <select id="whiskeyStyle" 
                     name="whiskeyStyle"
                     value = {whiskeyStyle}
                     onChange={(event) => setWhiskeyStyle(event.target.value)}
                     >
+                    <option value="Select">Select a Style</option>
                     <option value="Blend">Blend</option>
                     <option value="Bourbon">Bourbon</option>
                     <option value="Grain">Grain</option>
@@ -113,18 +109,14 @@ function NewWhiskeyNote(){
                     </select>
                     <br />
                 
-                    {/* <input
-                    type="text"
-                    placeholder="Country of Origin"
-                    value = {whiskeyCountry}
-                    onChange={(event) => setWhiskeyCountry(event.target.value)}
-                    /> */}
+                    
                     <label for="whiskeyCountry">Select the country of origin of your whisk&#40;e&#41;y</label>
                     <select id="whiskeyCountry" 
                     name="whiskeyCountry"
                     value = {whiskeyCountry}
                     onChange={(event) => setWhiskeyCountry(event.target.value)}
                     >
+                    <option value="Select">Select a Country</option>
                     <option value="Canada">Canada</option>
                     <option value="India">India</option>
                     <option value="Ireland">Ireland</option>

@@ -54,6 +54,7 @@ function NoteReview(){
             console.log(`ERR in POST`, err)
         })
         swal("Sláinte Mhaith!", "Your new note has been added", "success");
+        
         history.push('/dashboard')
     }
 // displaying the collected feedback on the page before user confirms final submission

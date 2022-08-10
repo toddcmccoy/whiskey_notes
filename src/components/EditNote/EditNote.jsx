@@ -55,6 +55,7 @@ function EditNote() {
                     value = {editNote.whiskey_style}
                     onChange={(event) => handleChange(event, 'whiskey_style')}
                     >
+                    <option value="Select">Select a Style</option>
                     <option value="Blend">Blend</option>
                     <option value="Bourbon">Bourbon</option>
                     <option value="Grain">Grain</option>
@@ -64,12 +65,13 @@ function EditNote() {
                     </select>
                     <br />
 
-                    <label for="Country">Country</label>
+                    <label for="whiskeyCountry">Country</label>
                     <select id="whiskeyCountry" 
                     name="whiskeyCountry"
                     value = {editNote.whiskey_country}
                     onChange={(event) => handleChange(event, 'whiskey_country')}
                     >
+                    <option value="Select">Select a Country</option>
                     <option value="Canada">Canada</option>
                     <option value="India">India</option>
                     <option value="Ireland">Ireland</option>

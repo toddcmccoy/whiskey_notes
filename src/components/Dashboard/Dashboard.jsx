@@ -14,7 +14,7 @@ function Dashboard() {
 
   useEffect(() => {
     dispatch({ type: 'FETCH_NOTES' });
-}, []);
+  }, []);
 
 const handleGoNewNote = () => {
   history.push('/newwhiskeynote')
