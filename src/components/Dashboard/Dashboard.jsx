@@ -37,7 +37,7 @@ const handleDeleteNote = (note) => {
     type: 'REMOVE_NOTE',
     payload: note.id
   });
-  dispatch({ type: "FETCH_NOTES" });
+  // dispatch({ type: "FETCH_NOTES" });
 };
 
 

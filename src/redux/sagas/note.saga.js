@@ -20,7 +20,7 @@ function* deleteNote(action) {
     console.log('this is action', action.payload);
     try {
       yield axios.delete(`/api/notes/${action.payload}`)
-      yield put({type: 'DELETE_NOTE'});
+      // yield put({type: 'DELETE_NOTE'});
       yield put({type:'FETCH_NOTES'});
     }
     catch (error) {

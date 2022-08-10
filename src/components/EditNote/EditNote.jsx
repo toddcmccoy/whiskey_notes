@@ -41,7 +41,7 @@ function EditNote() {
           <br /><h1>{editNote.whiskey_name}</h1><br />
             Created on: <h3>{editNote.date}</h3>
               <form onSubmit={handleSubmit}>
-                <label for="ABV">ABV</label>
+                <label htmlFor="ABV">ABV</label>
                 <input
                   id="ABV"
                   onChange={(event) => handleChange(event, 'whiskey_abv')}
