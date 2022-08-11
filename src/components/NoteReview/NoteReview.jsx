@@ -1,11 +1,12 @@
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import swal from 'sweetalert';
 
 function NoteReview(){
 // setting values stored in our redux store to variables in order to post them to the database
     const history = useHistory();
+    const dispatch = useDispatch();
     const userId = useSelector(store => store.user.id);
     const reviewDate = useSelector(store => store.note.dateReducer);
     const whiskeyName = useSelector(store => store.note.whiskeyNameReducer);
@@ -49,11 +50,11 @@ function NoteReview(){
         })
         .then(() => {
             dispatch({ type: 'FETCH_NOTES' });
-            swal("Sláinte Mhaith!", "Your new note has been added", "success");
         })
         .catch((err) => {
             console.log(`ERR in POST`, err)
         })
+        swal("Sláinte Mhaith!", "Your new note has been added", "success");
         history.push('/dashboard')
     }
 // displaying the collected feedback on the page before user confirms final submission
@@ -66,8 +67,10 @@ return(
         <h3>Review your new note</h3>
         <table>
             <thead>
+                <tr>
                 <th>Field</th>
                 <th>Your Response</th>
+                </tr>
             </thead>
             <tbody>
                 <tr><td>Date entered:</td><td> { reviewDate }</td></tr>

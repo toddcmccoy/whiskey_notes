@@ -31,7 +31,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 router.post('/', rejectUnauthenticated, (req, res) => {
     console.log("content is:", req.body);
     let queryText = `INSERT INTO "tasting_notes" (
-    "user_id","date","whiskey_name", "whiskey_abv", 
+    "user_id", "date", "whiskey_name", "whiskey_abv", 
     "whiskey_style", "whiskey_country", "why_this_whiskey", 
     "aroma_rating", "aroma_notes",
     "flavor_rating", "flavor_notes", 

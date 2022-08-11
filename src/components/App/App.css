@@ -42,9 +42,9 @@ Container
 .edit-container {
   padding: 20px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: row;
-  flex-wrap: wrap;
+  
 }
 
 .edit-card {

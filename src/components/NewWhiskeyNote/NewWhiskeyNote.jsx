@@ -64,7 +64,7 @@ function NewWhiskeyNote(){
                     value = {whiskeyName}
                     onChange={(event) => setWhiskeyName(event.target.value)}
                     />
-                    <label for="abv">Enter the Alcohol By Volume &#40;ABV&#41; of your whisk&#40;e&#41;y</label>
+                    <label htmlFor="abv">Enter the Alcohol By Volume &#40;ABV&#41; of your whisk&#40;e&#41;y</label>
                     <input
                     id="abv"
                     type="text"
