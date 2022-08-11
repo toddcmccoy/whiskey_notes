@@ -199,6 +199,11 @@ ul{
   list-style: none;
 }
 
+.aboutpage{
+  display: block;
+  text-align: left;
+}
+
 table {
   border: 1px solid;
   padding: 8px;
