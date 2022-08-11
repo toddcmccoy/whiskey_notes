@@ -26,6 +26,7 @@ import NoteReview from '../NoteReview/NoteReview';
 import NewWhiskeyNote from '../NewWhiskeyNote/NewWhiskeyNote';
 import './App.css';
 import AboutPage from '../AboutPage/AboutPage';
+import WhiskeyEducation from '../WhiskeyEducation/WhiskeyEducation';
 
 
 function App() {
@@ -145,9 +146,9 @@ function App() {
           <ProtectedRoute
             // logged in shows education else shows LoginPage
             exact
-            path="/education"
+            path="/whiskeyeducation"
           >
-            <Education />
+            <WhiskeyEducation />
           </ProtectedRoute>
 
           <Route
