@@ -33,7 +33,7 @@ function OverallNotes(){
         <div className = "container">
         <div className = "question-card">
         
-            <h4>Do you have any additional comments you would like to add?</h4>
+            <h3 className="rating">Do you have any additional comments you would like to add?</h3>
             <form>
                 <textarea
                 type="text"
@@ -42,9 +42,9 @@ function OverallNotes(){
                 onChange={(event) => setOverallNotes(event.target.value)}
                 />
             </form>
-                <h4>How would you rate this whiskey overall?</h4>
-                <p>Please select a number between 1 and 10.<br />
-                    1 being 'It effectively cleared the drain when I poured it out.'<br />
+                <h4 className="rating">How would you rate this whiskey overall?</h4>
+                <p className="rating">Please select a number between 1 and 10.</p><br />
+                <p>1 being 'It effectively cleared the drain when I poured it out.'<br />
                     10 being 'Whoa dang, this is the most amazing thing I have ever put in my mouth.'</p>
                 <form>
                 <input

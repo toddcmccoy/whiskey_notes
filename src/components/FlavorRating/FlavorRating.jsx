@@ -13,7 +13,7 @@ function FlavorRating(){
         swal(
             <div>
                 <h3>Tasting for analysis - Flavors</h3>
-                <ol>
+                <ul>
                     <li>Gently swirl the liquid in your glass again</li>
                     <hr className="solid"></hr>
                     <li>Take a very small sip, but do not swallow immediately</li>
@@ -30,7 +30,7 @@ function FlavorRating(){
                     <hr className="solid"></hr>
                     <li>As you continue to learn and expand your experience 
                         try adding a drop of water or a single ice cube and see how that changes your taste.</li>
-                </ol>
+                </ul>
             </div>
         )
     };
@@ -58,11 +58,11 @@ function FlavorRating(){
         <div className = "container">
         <div className = "question-card">
         
-            <h3>How would you rate the flavor intensity of this whiskey?</h3>
+            <h3 className="rating">How would you rate the flavor intensity of this whiskey?</h3>
             <p>New to tasting for analysis?</p><p className="aroma-flavor" onClick={launchHowToTaste}>Click here.</p>
-            <p>Please select a number between 1 and 10.<br />
+            <p className="rating">Please select a number between 1 and 10.</p>
             
-            1 being 'It doesn't taste like much of anything. This is simply wet and mildly alcoholic, I think.'<br />
+            <p>1 being 'It doesn't taste like much of anything. This is simply wet and mildly alcoholic, I think.'<br />
             10 being 'Dang, that is intense. I'll let you know what I taste once my tastebuds heal.'<br /></p>
             <form>
                 <input

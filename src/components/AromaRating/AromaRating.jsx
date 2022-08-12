@@ -17,7 +17,7 @@ function AromaRating(){
         swal(
             <div>
                 <h3>Tasting for analysis - Aromas</h3>
-                <ol>
+                <ul>
                     <li>Swirl the liquid in your glass - this will bring the aromas to the top of the glass</li>
                     <hr className="solid"></hr>
                     <li>Gently blow over the top of the glass - this will help disperse the heavy alcohol vapors</li>
@@ -31,7 +31,7 @@ function AromaRating(){
                     <li>Return the glass to a spot just below your nose and take in the aromas again</li>
                     <hr className="solid"></hr>
                     <li>Think about what you smell and write it down</li>
-                </ol>
+                </ul>
             </div>
         )
 
@@ -54,11 +54,11 @@ function AromaRating(){
         <div className = "container">
         <div className = "question-card">
         
-            <h3>How would you rate the aroma intensity of this whiskey?</h3>
-            <br />
-            <p>New to smelling/tasting for analysis?</p><p className="aroma-flavor" onClick={launchHowToSmell}>Click here.</p>
-            <p>Please select a number between 1 and 10.<br />
-            1 being 'It doesn't smell like much of anything. No alcohol burn and no distinct aromas.'<br />
+            <h3 className="rating">How would you rate the aroma intensity of this whiskey?</h3>
+            
+            <p>New to whiskey analysis?</p><p className="aroma-flavor" onClick={launchHowToSmell}>Click here.</p>
+            <p className="rating">Please select a number between 1 and 10.</p>
+            <p>1 being 'It doesn't smell like much of anything. No alcohol burn and no distinct aromas.'<br />
             10 being 'Wow, those scents are powerful. And/or I think the alcohol vapors permanently damaged my nose.'<br /></p>
             <form>
                 <input

@@ -77,9 +77,9 @@ function AromaNotes(){
         <div className = "container">
         <div className = "question-card">
             
-            <p>What do you smell? Remember, no wrong answers. <br />
-            If you smell wet leather, record it here.</p>
-            <p>New to smelling/tasting for analysis?</p><p className="aroma-flavor" onClick={launchHowToSmell}>Click here.</p>
+            <h3 className="rating">What do you smell? Remember, no wrong answers.</h3>
+            <p>If you smell wet leather, record it here.</p>
+            <p>New to whiskey analysis?</p><p className="aroma-flavor" onClick={launchHowToSmell}>Click here.</p>
             <p>Need some inspiration?</p><p className="aroma-flavor" onClick={launchAromas}>Click here.</p>
             <form>
                 <textarea

@@ -21,6 +21,30 @@ function AboutPage() {
         
         <a href="https://www.linkedin.com/in/toddcmccoy/">linkedin.com/in/toddcmccoy/</a>
         
+            <h4>Technologies used in the development of this app</h4>
+            <p>
+              HTML/CSS<br />
+              JavaScript<br />
+              React<br />
+              Redux<br />
+              Redux-Sagas<br />
+              Node<br />
+              Express<br />
+              Material UI<br />
+              Postgres<br />
+              SQL<br />
+              Axios<br />
+              SweetAlerts
+            </p>
+            <h4>Biggest challenge during app development</h4>
+            <p>
+              My biggest challenge was getting the Archive view and the Dashboard view<br /> to get and display the correct data from the database consistently.
+            </p>
+            <h4>Next Steps</h4>
+            <p>
+              I plan to incorporate image upload capabilities and cloud storage so users <br />can have a visual reminder of the whiskies they have tasted.<br />
+              I also intend to make the dashboard and archive view sortable byt rating, buy again status, etc
+            </p>
             <h4>I would like to thank</h4>
             <p>
             Everyone here at Prime, especially Liz and Dane<br />

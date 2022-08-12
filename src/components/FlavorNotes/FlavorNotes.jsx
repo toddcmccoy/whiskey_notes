@@ -79,8 +79,8 @@ function FlavorNotes(){
         <div className = "container">
             <div className = "question-card">
                
-                    <p>What do you taste? Remember, no wrong answers. <br />
-                    If you taste banana, you taste banana. Write it down<br />
+                    <h3 className="rating">What do you taste? Remember, no wrong answers.</h3>
+                    <p>If you taste banana, you taste banana. Write it down<br />
                     Taste and smell are very subjective. It is not important that your experience match anyone else's.<br />
                     It is important that you can relate to your notes.</p>
                     <p>New to tasting for analysis?</p><p className="aroma-flavor" onClick={launchHowToTaste}>Click here.</p>
