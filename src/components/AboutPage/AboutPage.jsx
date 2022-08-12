@@ -38,7 +38,8 @@ function AboutPage() {
             </p>
             <h4>Biggest challenge during app development</h4>
             <p>
-              My biggest challenge was getting the Archive view and the Dashboard view<br /> to get and display the correct data from the database consistently.
+              My biggest challenge was designing the app to be as streamlined as possible for the user.<br />
+              Ensuring that prompts and guidance did not take the user away from the process.
             </p>
             <h4>Next Steps</h4>
             <p>
