@@ -37,8 +37,8 @@ function Nav() {
               Whisk&#40;e&#41;y Note Archive
             </Link>
 
-            <Link className="navLink" to="/education">
-              Educational Resources
+            <Link className="navLink" to="/whiskeyeducation">
+              Education
             </Link>
 
             <LogOutButton className="navLink" />

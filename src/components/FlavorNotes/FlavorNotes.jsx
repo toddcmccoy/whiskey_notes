@@ -13,20 +13,26 @@ function FlavorNotes(){
         swal(
             <div>
                 <h3>Tasting for analysis - Flavors</h3>
-                <ol>
+                <ul>
                     <li>Gently swirl the liquid in your glass again</li>
+                    <hr className="solid"></hr>
                     <li>Take a very small sip, but do not swallow immediately</li>
+                    <hr className="solid"></hr>
                     <li>Let the whiskey coat your tongue</li>
+                    <hr className="solid"></hr>
                     <li>Think about how your mouth feels, what do you taste?</li>
+                    <hr className="solid"></hr>
                     <li>Swallow your whiskey</li>
+                    <hr className="solid"></hr>
                     <li>Pause and repeat this process for a second and/or third small sip</li>
+                    <hr className="solid"></hr>
                     <li>What flavors did you taste? What changed, if anything, with each sip?</li>
+                    <hr className="solid"></hr>
                     <li>As you continue to learn and expand your experience 
                         try adding a drop of water or a single ice cube and see how that changes your taste.</li>
-                </ol>
+                </ul>
             </div>
         )
-
     };
 
     const launchFlavors = () => {
@@ -35,14 +41,23 @@ function FlavorNotes(){
               <h3>Common whiskey flavors and aromas</h3>
               <ul>
                 <li>Fruit &#40;fresh, dried, baked&#41;</li>
+                <hr className="solid"></hr>
                 <li>Floral &#40;rose petals, perfume&#41;</li>
+                <hr className="solid"></hr>
                 <li>Vegetal &#40;fresh mown grass, dry leaves&#41;</li>
+                <hr className="solid"></hr>
                 <li>Charcoal &#40;smoke, fireplace&#41;</li>
+                <hr className="solid"></hr>
                 <li>Peaty &#40;wet earth, wet dog&#41;</li>
+                <hr className="solid"></hr>
                 <li>Wood &#40;oak&#41;</li>
+                <hr className="solid"></hr>
                 <li>Toffee &#40;caramel, butterscotch, vanilla&#41;</li>
+                <hr className="solid"></hr>
                 <li>Tobacco &#40;cigar box, leather&#41;</li>
+                <hr className="solid"></hr>
                 <li>Medicinal &#40;iodine, turpentine&#41;</li>
+                <hr className="solid"></hr>
                 <li>Spices &#40;all spice, clove, nutmeg&#41;</li>
               </ul>
             </div>
@@ -68,7 +83,7 @@ function FlavorNotes(){
                     If you taste banana, you taste banana. Write it down<br />
                     Taste and smell are very subjective. It is not important that your experience match anyone else's.<br />
                     It is important that you can relate to your notes.</p>
-                    <p>New to smelling/tasting for analysis?</p><p className="aroma-flavor" onClick={launchHowToTaste}>Click here.</p>
+                    <p>New to tasting for analysis?</p><p className="aroma-flavor" onClick={launchHowToTaste}>Click here.</p>
                     <p>Need some inspiration?</p><p className="aroma-flavor" onClick={launchFlavors}>Click here.</p>
                         <form>
                             <textarea

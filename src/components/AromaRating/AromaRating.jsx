@@ -19,12 +19,17 @@ function AromaRating(){
                 <h3>Tasting for analysis - Aromas</h3>
                 <ol>
                     <li>Swirl the liquid in your glass - this will bring the aromas to the top of the glass</li>
+                    <hr className="solid"></hr>
                     <li>Gently blow over the top of the glass - this will help disperse the heavy alcohol vapors</li>
+                    <hr className="solid"></hr>
                     <li>Open your mouth slightly and inhale the aromas from 4-6 inches away from your nose<br />
                     A note of caution, especially to experienced wine tasters, do not bring the glass as close to your nose as you might with wine. 
                     The higher ABV in whiskey will ruin your sense of smell for about 20 minutes if you do.</li>
+                    <hr className="solid"></hr>
                     <li>Move your glass away and take a breath</li>
+                    <hr className="solid"></hr>
                     <li>Return the glass to a spot just below your nose and take in the aromas again</li>
+                    <hr className="solid"></hr>
                     <li>Think about what you smell and write it down</li>
                 </ol>
             </div>
