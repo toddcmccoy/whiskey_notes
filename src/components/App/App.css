@@ -250,3 +250,13 @@ select {
   border-radius: 4px;
   background-color: #f8f8f8;
 }
+
+.aroma-flavor{
+  color:rgb(96, 126, 170);
+  font-style: italic;
+}
+
+.aroma-flavor:hover{
+  color: navy;
+  cursor: help;
+}

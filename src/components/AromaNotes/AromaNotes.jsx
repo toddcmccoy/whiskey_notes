@@ -29,6 +29,25 @@ function AromaNotes(){
           )
     };
 
+    const launchHowToSmell = () => {
+        swal(
+            <div>
+                <h3>Tasting for analysis - Aromas</h3>
+                <ol>
+                    <li>Swirl the liquid in your glass - this will bring the aromas to the top of the glass</li>
+                    <li>Gently blow over the top of the glass - this will help disperse the heavy alcohol vapors</li>
+                    <li>Open your mouth slightly and inhale the aromas from 4-6 inches away from your nose<br />
+                    A note of caution, especially to experienced wine tasters, do not bring the glass as close to your nose as you might with wine. 
+                    The higher ABV in whiskey will ruin your sense of smell for about 20 minutes if you do.</li>
+                    <li>Move your glass away and take a breath</li>
+                    <li>Return the glass to a spot just below your nose and take in the aromas again</li>
+                    <li>Think about what you smell and write it down</li>
+                </ol>
+            </div>
+        )
+
+    };
+
     const handleGoBack = () => {
         history.push('/aromarating')
     };
@@ -46,7 +65,8 @@ function AromaNotes(){
             
             <p>What do you smell? Remember, no wrong answers. <br />
             If you smell wet leather, record it here.</p>
-            <p onClick={launchAromas}>Need some inspiration? Click here.</p>
+            <p>New to smelling/tasting for analysis?</p><p className="aroma-flavor" onClick={launchHowToSmell}>Click here.</p>
+            <p>Need some inspiration?</p><p className="aroma-flavor" onClick={launchAromas}>Click here.</p>
             <form>
                 <textarea
                 type="text"

@@ -12,6 +12,8 @@ function FlavorRating(){
         history.push('/aromanotes')
     };
 
+    
+
 // sending the selected rating to the store and ensuring that the submission is in the range of 1 to 5
     const handleSubmit = () => {
         if (flavorRating >= 1) {

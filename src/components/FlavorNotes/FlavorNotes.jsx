@@ -9,6 +9,26 @@ function FlavorNotes(){
     const history = useHistory();
     const [flavorNotes, setFlavorNotes] = useState('');
 
+    const launchHowToTaste = () => {
+        swal(
+            <div>
+                <h3>Tasting for analysis - Flavors</h3>
+                <ol>
+                    <li>Gently swirl the liquid in your glass again</li>
+                    <li>Take a very small sip, but do not swallow immediately</li>
+                    <li>Let the whiskey coat your tongue</li>
+                    <li>Think about how your mouth feels, what do you taste?</li>
+                    <li>Swallow your whiskey</li>
+                    <li>Pause and repeat this process for a second and/or third small sip</li>
+                    <li>What flavors did you taste? What changed, if anything, with each sip?</li>
+                    <li>As you continue to learn and expand your experience 
+                        try adding a drop of water or a single ice cube and see how that changes your taste.</li>
+                </ol>
+            </div>
+        )
+
+    };
+
     const launchFlavors = () => {
         swal(
             <div>
@@ -48,7 +68,8 @@ function FlavorNotes(){
                     If you taste banana, you taste banana. Write it down<br />
                     Taste and smell are very subjective. It is not important that your experience match anyone else's.<br />
                     It is important that you can relate to your notes.</p>
-                    <p onClick={launchFlavors}>Need some inspiration? Click here.</p>
+                    <p>New to smelling/tasting for analysis?</p><p className="aroma-flavor" onClick={launchHowToTaste}>Click here.</p>
+                    <p>Need some inspiration?</p><p className="aroma-flavor" onClick={launchFlavors}>Click here.</p>
                         <form>
                             <textarea
                             type="text"
