@@ -31,7 +31,7 @@
     "redux-logger": "^3.0.6",
     "redux-saga": "^1.1.3",
     "sweetalert": "^2.1.2",
-    "sweetalert-with-react": "^2.0.2"
+    "sweetalert-with-react": "^2.0.1"
   },
   "scripts": {
     "start": "node server/server.js",
