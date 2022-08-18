@@ -10,7 +10,6 @@ import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import Archive from '../Archive/Archive';
-import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import AromaNotes from '../AromaNotes/AromaNotes';
@@ -189,7 +188,7 @@ function App() {
               <Redirect to="/user" />
               :
               // Otherwise, show the Landing page
-              <LandingPage />
+              <AppHowToUse />
             }
           </Route>
 
