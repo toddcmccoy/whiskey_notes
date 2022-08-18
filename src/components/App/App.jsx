@@ -26,6 +26,7 @@ import NewWhiskeyNote from '../NewWhiskeyNote/NewWhiskeyNote';
 import './App.css';
 import AboutPage from '../AboutPage/AboutPage';
 import WhiskeyEducation from '../WhiskeyEducation/WhiskeyEducation';
+import LandingPage from '../LandingPage/LandingPage';
 
 
 function App() {
@@ -188,7 +189,7 @@ function App() {
               <Redirect to="/user" />
               :
               // Otherwise, show the Landing page
-              <LoginPage />
+              <LandingPage />
             }
           </Route>
 
