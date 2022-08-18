@@ -1,4 +1,5 @@
 import React from 'react';
+import AboutPage from '../AboutPage/AboutPage';
 import './Footer.css';
 
 // This is one of our simplest components
@@ -7,7 +8,7 @@ import './Footer.css';
 // or even care what the redux state is, so it doesn't need 'connect()'
 
 function Footer() {
-  return <footer>&copy; Todd C McCoy</footer>;
+  return <footer><AboutPage>&copy; Todd C McCoy</AboutPage></footer>;
 }
 
 export default Footer;
