@@ -44,7 +44,7 @@ function AboutPage() {
             <h4>Next Steps</h4>
             <p>
               I plan to incorporate image upload capabilities and cloud storage so users <br />can have a visual reminder of the whiskies they have tasted.<br />
-              I also intend to make the dashboard and archive view sortable byt rating, buy again status, etc
+              I also intend to make the dashboard and archive view sortable by rating, buy again status, etc
             </p>
             <h4>I would like to thank</h4>
             <p>
