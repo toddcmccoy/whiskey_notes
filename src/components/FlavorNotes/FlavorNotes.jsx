@@ -1,7 +1,8 @@
+import React from 'react';
 import { useState} from 'react'
 import { useHistory } from "react-router-dom"
 import { useDispatch } from 'react-redux'; 
-import swal from 'sweetalert-with-react';
+import swal from '@sweetalert/with-react';
 
 function FlavorNotes(){
 
