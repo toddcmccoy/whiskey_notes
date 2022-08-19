@@ -4,12 +4,12 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Box } from '@mui/system';
+// import { Box } from '@mui/system';
 
 
 export default function WhiskeyEducation() {
   return (
-    <Box className="question-card"
+    <div className="question-card"
     sx={{
         display: 'grid',
         gridTemplateColumns: 'repeat(2)',
@@ -191,7 +191,7 @@ export default function WhiskeyEducation() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-    </Box>
+    </div>
   );
 }
 
