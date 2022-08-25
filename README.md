@@ -14,7 +14,7 @@ _Duration: 2 Week Sprint_
 
 Whisk(e)y Notes is designed to help budding whiskey enthusiasts break into the hobby. With a large amount of industry jargon, copy written by marketing departments, and gatekeeping getting involved in whiskey as a hobby can be overwhelming and intimidating. This app helps to remove some of those barriers by creating a private journal to track whiskies you have tried. Simple ratings and no expectations or unnecessary jargon. You will have a chance to learn as you wish to learn and record notes in a way that makes sense to you.
 
-To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](https://whiskey-notes.herokuapp.com/)
+To see the fully functional site, please visit: [Whiskey Notes](https://whiskey-notes.herokuapp.com/)
 
 ## Screen Shot
 
