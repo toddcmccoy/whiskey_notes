@@ -18,7 +18,8 @@ To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](https:
 
 ## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused.
+![whiskey-note-dashboard](https://user-images.githubusercontent.com/93785112/186767954-82fad43c-63ba-4578-9537-95beb09c3816.png)
+
 
 ### Prerequisites
 
