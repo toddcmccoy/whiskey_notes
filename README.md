@@ -21,13 +21,6 @@ To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](https:
 ![whiskey-note-dashboard](https://user-images.githubusercontent.com/93785112/186767954-82fad43c-63ba-4578-9537-95beb09c3816.png)
 
 
-### Prerequisites
-
-Link to software that is required to install the app (e.g. node).
-
-- [Node.js](https://nodejs.org/en/)
-- List other prerequisites here
-
 ## Local installation
 
 
