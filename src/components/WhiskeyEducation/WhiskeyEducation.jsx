@@ -1,4 +1,5 @@
-import { useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom";
+import './WhiskeyEducation.css';
 
 
 function WhiskeyEducation(){
@@ -14,26 +15,112 @@ function WhiskeyEducation(){
     return(
         <div className = "container">
             <div className = "question-card">
-                <h1>What is bourbon?</h1>
+                <div className = "info">
+                <nav class="accordion arrows">
+            <header class="box">
+                <label for="acc-close" class="box-title">Whiskey Types</label>
+            </header>
+            <input type="radio" name="accordion" id="cb1" />
+            <section class="box">
+                <label class="box-title" for="cb1">Scotch Whisky</label>
+                <label class="box-close" for="acc-close"></label>
+                <div class="box-content">Scotch</div>
+            </section>
+            <input type="radio" name="accordion" id="cb2" />
+            <section class="box">
+                <label class="box-title" for="cb2">Bourbon</label>
+                <label class="box-close" for="acc-close"></label>
+                <div class="box-content">
+                
+                Bourbon is a distinct product of the United States.<br />
+                It must be distilled at no higher than 165 proof from a recipe of at least 51% corn,
+                placed in new charred oak containers at no higher than 125 proof,
+                then finally bottled at no less than 80 proof.<br /><br />
 
-                        <h2>Bourbon as we know it</h2>
-                        <h3>Must be produced in the United States (since 1964)<br/>
-                        Must be aged in a new, charred oak container (since 1938)<br/>
-                        Aged for two years may be labeled “straight”<br/>
-                        Any bourbon aged less than four years must have an age statement on the label<br/>
-                        Must be distilled to less than 160 proof<br/>
-                        Must go into the oak container at 125 proof or less<br/>
-                        Must be bottled at a minimum of 80 proof<br/></h3>
+                Fun fact: While Kentucky produces 90 to 95 percent of bourbon in the world
+                it can be made anywhere in the United States, including Guam and Puerto Rico.
+                </div>
+            </section>
+            <input type="radio" name="accordion" id="cb3" />
+            <section class="box">
+                <label class="box-title" for="cb3">Irish Whiskey</label>
+                <label class="box-close" for="acc-close"></label>
+                <div class="box-content">
+                The legal stuff - Irish whiskey must be distilled and aged in Ireland.<br />
+                Unique note - Ireland is home to Single Pot Still whiskey, a whiskey produced in a pot still using both malted barley
+                and unmalted barley. The practice began when the British Crown increased taxes on malted barley in 1785. Irish distillers reduced the amount
+                of malted barley and added in unmalted barley, thereby screwing over the English.
+                </div>
+            </section>
+            <input type="radio" name="accordion" id="cb7" />
+            <section class="box">
+                <label class="box-title" for="cb7">Rye Whiskey</label>
+                <label class="box-close" for="acc-close"></label>
+                <div class="box-content">Rye info</div>
+            </section>
+            <input type="radio" name="accordion" id="cb8" />
+            <section class="box">
+                <label class="box-title" for="cb8">Canadian Whisky</label>
+                <label class="box-close" for="acc-close"></label>
+                <div class="box-content">Canadian info</div>
+            </section>
+            <input type="radio" name="accordion" id="cb9" />
+            <section class="box">
+                <label class="box-title" for="cb9">Japanese Whiskey</label>
+                <label class="box-close" for="acc-close"></label>
+                <div class="box-content">Japanese info</div>
+            </section>
+            
+            </nav>
+            <nav class="accordion arrows">
+            <header class="box">
+                <label for="acc-close" class="box-title">Fun facts</label>
+            </header>
+            <input type="radio" name="accordion" id="cb4" />
+            <section class="box">
+                <label class="box-title" for="cb4">Is Jack Daniel's a Bourbon?</label>
+                <label class="box-close" for="acc-close"></label>
+                <div class="box-content">Technically, yes it is. I'll give you a second with that.<br />
+                Old Number 7 meets all the legal requirements for bourbon. 
+                In fact, it is classified as a bourbon by the United States Tax and Trade Bureau.
+                Why don't they call it bourbon? Well, because they don't want to.<br />
+                Pro tip: when visiting Tennessee DO NOT refer to Jack Daniel's as bourbon. 
+                It will not go well for you.
+                </div>
+            </section>
 
-                        <h2>Bottle-in-Bond Act of 1897</h2>
-                        <h3>Must be distilled by one distiller<br/>
-                        Distilled during one distilling season (January to June or July to December)<br/>
-                        Aged in new charred oak containers for a minimum of four years in a Federally bonded warehouse<br/>
-                        Bottled at 100 proof in glass bottles</h3>
-                    <br />
-                    <p>Fun fact: While Kentucky produces 90 to 95 percent of bourbon in the world
-                      it can be made anywhere in the United States, including Guam and Puerto Rico.</p>
-                <br />
+            <input type="radio" name="accordion" id="acc-close" />
+            <input type="radio" name="accordion" id="cb5" />
+            <section class="box">
+                <label class="box-title" for="cb5">How is whisk(e)y made?</label>
+                <label class="box-close" for="acc-close"></label>
+                <div class="box-content">It all starts with grain<br />
+                
+                </div>
+            </section>
+
+            <input type="radio" name="accordion" id="acc-close" />
+            <input type="radio" name="accordion" id="cb6" />
+            <section class="box">
+                <label class="box-title" for="cb6">Why do they char the barrels?</label>
+                <label class="box-close" for="acc-close"></label>
+                <div class="box-content"><br />
+                </div>
+            </section>
+
+            <input type="radio" name="accordion" id="acc-close" />
+            <input type="radio" name="accordion" id="cb10" />
+            <section class="box">
+                <label class="box-title" for="cb10">More Resources</label>
+                <label class="box-close" for="acc-close"></label>
+                <div class="box-content">
+                I highly recommend 
+                <a href="https://www.amazon.com/Tasting-Whiskey-Insiders-Pleasures-Spirits/dp/1612123015"> Tasting Whiskey by Lew Bryson</a>.
+                This book is by far the best and most approachable introduction to the world of whiskey I have found.
+                </div>
+            </section>
+            </nav>
+            </div>
             <button onClick={handleGoDashboard}>Back to dashboard</button>
         </div>
     </div>
