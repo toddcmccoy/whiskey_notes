@@ -119,8 +119,20 @@ function WhiskeyEducation(){
                 This book is by far the best and most approachable introduction to the world of whiskey I have found.
                 </div>
             </section>
+            <input type="radio" name="accordion" id="cb11" />
+            <section class="box">
+                <label class="box-title" for="cb11">More</label>
+                <label class="box-close" for="acc-close"></label>
+                <div class="box-content">More info to come</div>
+            </section>
+            <input type="radio" name="accordion" id="cb12" />
+            <section class="box">
+                <label class="box-title" for="cb12">More</label>
+                <label class="box-close" for="acc-close"></label>
+                <div class="box-content">More info to come</div>
+            </section>
             </nav>
-            </div>
+            </div><br />
             <button onClick={handleGoDashboard}>Back to dashboard</button>
         </div>
     </div>
