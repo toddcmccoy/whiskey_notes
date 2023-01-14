@@ -104,7 +104,14 @@ function WhiskeyEducation(){
             <section class="box">
                 <label class="box-title" for="cb6">Why do they char the barrels?</label>
                 <label class="box-close" for="acc-close"></label>
-                <div class="box-content"><br />
+                <div class="box-content">
+                Charring essentially opens the wood up, making it easier for bourbon to extract flavors. It also catalyzes key chemical changes that are essential to bourbon. Ever tasted vanilla? Because lignin, the source of vanillin , 
+                produces a higher level of flavor the longer a barrel is charred. Likewise, toffee and caramel notes come from hemicellulose, which breaks down into wood sugars in the presence of intense heat. 
+                The resting bourbon absorbs these sugars from the caramelized surface as it ages.
+                A higher level of char has other effects as well. 
+                Higher charred barrels allow less interaction between the wood tannins and the spirit. 
+                Lactones, which are the compounds responsible for coconut and woody notes in a bourbon, are similarly lessened as the char increases. 
+                <br />
                 </div>
             </section>
 
